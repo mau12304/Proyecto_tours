@@ -19,10 +19,10 @@
         <nav>
             <ul>
                 <li><a href="">Inicio</a></li>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Paquetes</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="">Paquetes Turisticos</a></li>
                 <li><a href="">Reservación</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Conocenos</a></li>
                 <li><a href="">Iniciar sesión</a></li>
             </ul>
         </nav>
