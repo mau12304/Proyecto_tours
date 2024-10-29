@@ -4,7 +4,7 @@
     padding: 0;
 }
 body {
-    background-color: rgb(239, 243, 239, 1);
+    background-color: white;
     margin: 0;
     padding: 0;
 }
@@ -17,14 +17,16 @@ header h1 {
     margin-top: 4%;
     width: 100%;
     height: 250px;
-    border-color: #ccc;
+    border-color: white;
 }
 .encabezado {
     text-align: center;
     padding: 20px;
-    background-color: #d0dce4;
+    background-color: white;
 }
-.encabezado{
+.encabezado h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
     color: #283e51; 
     margin: 0;
     text-shadow: 1px 1px 5px rgba(247, 240, 240, 0.2); 
@@ -32,11 +34,12 @@ header h1 {
 /*Jeshua*/
 /* Menu de Navegacion Victor */
 nav {
-    background-color: white;
+    background-color: #ffffff;
     width: 100%;
     height: 60px; 
     display: inline-block;
     text-align: right;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
     position: fixed;
     top: 0;
     z-index: 1000; 
@@ -69,7 +72,7 @@ nav .active a {
 }
  
 nav a:hover {
-    color: rgb(56, 59, 219); /* Color de hover */
+    color: rgb(94, 33, 226); /* Color de hover */
     border-bottom: 3px solid rgb(13, 13, 14); 
 }
 
@@ -90,12 +93,14 @@ nav .active::after {
     object-fit: cover;
     display: block;
 }
+
 /*Diego Merida*/
 .search-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    
 }
 input[type="text"] {
     padding: 10px;
@@ -120,22 +125,23 @@ button:hover {
 /*Diego Merida*/
 
 /*Contenido de página*/
-article{
+article {
     text-align: justify;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    background: rgba(217, 217, 217, 1);
+    background: white;
     
 }
+/*
 .carousel-item img {
-    width: 1500px;       /* Ajusta el ancho para que ocupe el espacio completo del carrusel */
-    max-height: 480px; /* Ajusta la altura máxima a lo que desees */
-    object-fit: contain; /* Mantén las proporciones de la imagen sin recortarla */
-    object-fit: cover;
+    width: 100%;       /* Ajusta el ancho para que ocupe el espacio completo del carrusel */
+/*    max-height: 400px; /* Ajusta la altura máxima a lo que desees */
+ /*   object-fit: contain; /* Mantén las proporciones de la imagen sin recortarla */
+  /*  object-fit: cover;
     padding-left: 85px;
     padding-right: 85px;
-    background-color: rgba(217, 217, 217, 1);
-}
+    background-color: white;
+}*/
 
 .title{
     text-align: center;
@@ -148,7 +154,7 @@ article{
     width: 100%;
     height: 290px;
     color: rgb(255, 255, 255);
-    background-image: url(../img/alg_act.jpg); 
+    background-image: url(..//img/alg_act.jpg); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
@@ -158,7 +164,7 @@ article{
 }
 .act {
     display: flex;
-    background-color: rgb(251, 249, 249);
+    background-color: #f2f2f2;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgb(142, 142, 147);
@@ -167,7 +173,6 @@ article{
     height: 250px;
     margin-left: 200px;
     margin-right: 180px;
-
 }
 
 .act_imagen {
@@ -207,6 +212,7 @@ article{
     transition: background-color 0.3s ease;
     align-self: start;
 }
+
 .act_btn_reservar:hover {
     background-color: #010101;
 }
@@ -236,7 +242,7 @@ article{
     margin-top: 50px;
     margin-left: 60px;
     background-color: rgb(171, 177, 175);
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .pie_imagen ::after{
     pointer-events: stroke;
