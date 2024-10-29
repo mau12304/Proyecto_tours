@@ -14,8 +14,20 @@ header h1 {
 }
 /*Jeshua*/
 .encabezado img{
-    margin-top: 80px;
-    border-radius: 20px;
+    margin-top: 4%;
+    width: 100%;
+    height: 250px;
+    border-color: #ccc;
+}
+.encabezado {
+    text-align: center;
+    padding: 20px;
+    background-color: #d0dce4;
+}
+.encabezado{
+    color: #283e51; 
+    margin: 0;
+    text-shadow: 1px 1px 5px rgba(247, 240, 240, 0.2); 
 }
 /*Jeshua*/
 /* Menu de Navegacion Victor */
@@ -57,7 +69,7 @@ nav .active a {
 }
  
 nav a:hover {
-    color: white; /* Color de hover */
+    color: rgb(56, 59, 219); /* Color de hover */
     border-bottom: 3px solid rgb(13, 13, 14); 
 }
 
