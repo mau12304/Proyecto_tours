@@ -2,13 +2,13 @@
         <div id="carouselExampleFade" class="carousel slide carousel-fade" >
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="vista/img/alg_act.jpg"  alt="firs">
+                <img src="vista/img/cañon1.png"  alt="firs">
               </div>
               <div class="carousel-item">
-                <img src="vista/img/cañon1.png"  alt="second">
+                <img src="vista/img/luces.png"  alt="second">
               </div>
               <div class="carousel-item">
-                <img src="vista/img/luces.png"  alt="three">
+                <img src="vista/img/alg_act.jpg"  alt="three">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
