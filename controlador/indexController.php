@@ -10,6 +10,6 @@ class indexController{
     public static function index(){
         require_once("vista/index.php");
     }
-    
+ 
 }
 ?>
