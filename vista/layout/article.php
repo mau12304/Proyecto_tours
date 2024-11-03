@@ -1,5 +1,4 @@
 <article>
-    
         <!--Amin-->
         <div class="title">
             <div class="title2">

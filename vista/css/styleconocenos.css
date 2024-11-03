@@ -1,0 +1,134 @@
+.conocenos_title{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+    align-content: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 0px;
+    width: 100%;
+    height: 600px;
+    color: rgb(255, 255, 255);
+    background-image: url(../img/conocenos/conocenos.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+}
+.conocenos_title2 {
+    padding-top: 250px;
+}
+
+.conocenos_container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.conocenos_title2 h1{
+    font-size: 2em;
+    color: #ffffff;
+}
+.conocenos_value {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+    text-align: left;
+}
+.conocenos_value img {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+}
+.conocenos_value-title {
+    font-weight: bold;
+    color: #333;
+}
+.conocenos_value-description {
+    color: #555;
+}
+
+.conocenos_body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #ffffff;
+}
+.conocenos_form-container {
+    background-color: #FFD700;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.conocenos_container h1 {
+    font-size: 24px;
+    color: #000;
+    margin: 0 0 10px;
+}
+
+.conocenos_form-container input[type="text"],
+.conocenos_form-container input[type="email"],
+.conocenos_form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.conocenos_form-container textarea {
+    height: 80px;
+}
+.conocenos_submit-btn {
+    background-color: #333;
+    color: #FFF;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+.conocenos_submit-btn:hover {
+    background-color: #444;
+}
+
+.conocenos_Equipo{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+}
+.conocenos_Equipo h1 {
+    color: #333;
+}
+
+.conocenos_recipiente {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.conocenos_team-member {
+    width: 250px;
+    margin: 20px;
+    text-align: center;
+}
+.conocenos_team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+.conocenos_name {
+    font-weight: bold;
+    color: #e6007e;
+}
+.conocenos_position {
+    color: #000000;
+    font-size: 14px;
+}

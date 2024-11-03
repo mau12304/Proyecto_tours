@@ -1,0 +1,202 @@
+.detalle_paquetes{
+    width: 100%;
+    max-height: 1900px;
+    background-color: rgba(239, 243, 239, 1);
+    
+}
+
+.detalle_borde{
+    background-color: rgb(104, 109, 105);
+    width: 15px;
+    height: 300px;
+    content: none;
+    position: relative;
+    left: 120px;
+    top: 30px;
+    border-radius: 5px;
+}
+.detalle_marco{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(193, 199, 199);
+    width: 340px;
+    height: 300px;
+    position: relative;
+    left: 135px;
+    padding: 20px;
+    bottom: 270px;
+    line-height: 0.7;
+    border-radius: 5px;
+}
+.detalle_marco h1{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.detalle_marco p{
+    position: relative;
+    left: 7px;
+    top: 15px;
+}
+.detalle_marco img{
+    position: relative;
+    right: 5px;
+    bottom: 5px;
+}
+
+/*Detalle de los dias en el tours*/
+.detalle_contenido_detalle{
+    min-height: 100%;
+    width: 1000px;
+    padding-top: 300px;
+    position: relative;
+    bottom: 230px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.detalle_del_dia{
+    background-color: rgb(193, 199, 199);
+    width: 580px;
+    line-height: 1.5;
+    position: relative;
+    left: 120px;
+    bottom: 290px;
+    padding: 40px;
+    border-radius: 5px;
+    text-align: justify;
+    margin-top: 30px;
+}
+.detalle_dia h3{
+    margin-bottom: 15px;
+    font-size: 17px;
+    
+}
+.detalle_dia h4{
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: black;
+}
+.detalle_dia img{
+    position: relative;
+    right: 8px;
+}
+
+/*tabla detalle*/
+.detalle_tabla_contenido{
+    width: 600px;
+    height: 160px;
+    text-align: center;
+    position: relative;
+    left: 790px;
+    bottom: 1790px;
+}
+
+.detalle_tabla_contenido table {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    height: 110px;
+}
+
+.detalle_tabla_contenido th, td {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+.detalle_tabla_contenido thead th {
+    background-color: #d3d3d3;
+    font-weight: bold;
+    color: #333;
+}
+
+.detalle_tabla_contenido p {
+    font-size: 14px;
+    color: #555;
+}
+/*Nota de la tabla*/
+.detalle_nota{
+    position: relative;
+    bottom: 15px;
+    right: 155px;
+}
+.detalle_nota p {
+    font-size: 20px;
+    color: #999999; /* Gris claro */
+    font-style: italic;
+}
+
+.detalle_nota strong {
+    font-weight: bold;
+}
+
+/*Formulario*/
+.detalle_form_contenido {
+    background-color: rgb(193, 199, 199);
+    width: 500px;
+    padding: 50px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    position: relative;
+    left: 900px;
+    bottom: 1610px;
+    height: 700px;
+}
+
+.detalle_form_titulo{
+    background-color: #767fa8;
+    padding: 5px;
+    border-radius: 10px;
+}
+.detalle_form_titulo h1{
+    font-size: 25px;
+}
+
+.detalle_form_campos h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.detalle_form_campos{
+    gap: 10px;
+    margin-bottom: 30px;
+
+}
+.detalle_formulario{
+    margin-top: 20px;
+}
+
+.detalle_formulario input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.detalle_formulario input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+    background-color: #fff;
+    color: #333;
+}
+
+.detalle_formualario textarea {
+    resize: none;
+    height: 60px;
+}
+
+.detalle_formulario button {
+    background-color: #767fa8;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.detalle_formulario button:hover {
+    background-color: #5c9a7b;;
+}

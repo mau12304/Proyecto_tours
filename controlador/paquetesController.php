@@ -6,7 +6,16 @@ class PaquetesController{
         $this->paquetesModel = new paquetesModel();
     }
     public static function mostrarpaquetes(){
-        require('vista/paquetes/mostrarPaquetes.php');
+        require_once('vista/paquetes/mostrarPaquetes.php');
+    }
+    public static function mostrarpaquetesintermedio(){
+        require_once('vista/paquetes/paquetesIntermedio.php');
+    }
+    public static function mostrarpaquetesmoderado(){
+        require_once('vista/paquetes/paquetesModerado.php');
+    }
+    public static function mostradetallepaquete(){
+        require_once('vista/paquetes/detallePaquete.php');
     }
 }
 ?>

@@ -6,7 +6,7 @@
     
     
 }
-label{
+.vista_label{
     position: relative;
     top: 20px;
     left: 950px;
@@ -20,19 +20,18 @@ label{
     padding-right: 10px;
     cursor: pointer;
 }
-.ctg_paquete{
+.vista_sctg_paquete{
     text-decoration: none;
     color: rgba(117, 117, 117, 1);
 }
-.ctg_paquete :hover{
+.vista_sctg_paquete :hover{
     border-bottom: 3px solid rgb(129, 129, 136);
-
 }
-.seccion1_paquetes{
+.vista_seccion1_paquetes{
     display: flex;
     align-items: center; /* Alineación vertical */
 }
-.paquete{ /*Diseño de los paquetes*/
+.vista_paquete{ /*Diseño de los paquetes*/
     background-color: rgba(255, 255, 255, 1);
     width: 280px;
     height: 485px;
@@ -47,7 +46,7 @@ label{
     position: relative;
 }
 /*Paquetes superior*/
-.img_one{
+.vista_img_one{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
@@ -64,43 +63,53 @@ label{
     font-family: Arial, Helvetica, sans-serif;
 
 }
-.titlepac {
+.vista_titlepac {
     color: white;
-    padding-top: 190px;
-    font-size: 20px;
+    width: 250px;
+    height: 100px;
+    font-size: 10px;
+    position: relative;
+    top: 165px;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
 /* HIPERVINCULOS DE LOS PAQUETES */
-.titlepac a {
+.vista_titlepac a {
     text-decoration: none;
     color: white;
 }
-.titlepac a:hover {
+.vista_titlepac a:hover {
     color: #e3e0e0;
     border-bottom: 4px solid #f7dc6f;
 }
-.titlelarge a {
+.vista_titlelarge a {
     text-decoration: none;
     color: white;
 }
-.titlelarge a:hover {
+.vista_titlelarge a:hover {
     color: #e3e0e0;
     border-bottom: 4px solid #f7dc6f;
 }
 /* -------- */
-.text {
+.vista_text{
     /* Texto */
     position: relative;
-    margin-bottom: 2px;
-    bottom: 3px;
-    text-align: center;
+    top: 135px;
+    width: 180px;
+    height: 80px;
     color: #f7dc6f;
     font-weight: bolder;
     font-size: 45px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.vista_descripcion{
+    position: relative;
+    top: 120px;
+    line-height: 1.5;
+    text-align: center;    
+}
 
-.img_two{
+.vista_img_two{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
@@ -117,7 +126,7 @@ label{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.img_thre{
+.vista_img_thre{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
@@ -133,59 +142,59 @@ label{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.seccion2_paquetes{ /*Clase para ordenar los paquetes o movil entre ellos*/
+.vista_seccion2_paquetes{ /*Clase para ordenar los paquetes o movil entre ellos*/
     display: flex;
     align-items: center;
     position: relative;
     top: 40px;
 }
-.img_cuatro{
+.vista_img_cuatro{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
     position: relative;
     bottom: 105px;
-            /* Imagen */
-            background-image: url(../img/img_paquetes/aguaazul.jpeg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            /* Texto */
-            color: gray;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
+    /* Imagen */
+    background-image: url(../img/img_paquetes/aguaazul.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Texto */
+    color: gray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.img_cinco{
+.vista_img_cinco{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
     position: relative;
     bottom: 105px;
-            /* Imagen */
-            background-image: url(../img/img_paquetes/comitandmg.jpeg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            /* Texto */
-            color: gray;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
+    /* Imagen */
+    background-image: url(../img/img_paquetes/comitandmg.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Texto */
+    color: gray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.img_seis{
+.vista_img_seis{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
     position: relative;
     bottom: 105px;
-            /* Imagen */
-            background-image: url(../img/img_paquetes/simcotorras.jpeg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            /* Texto */
-            color: gray;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
+    /* Imagen */
+    background-image: url(../img/img_paquetes/simcotorras.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Texto */
+    color: gray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 /*Paquetes superior*/
 
@@ -193,23 +202,23 @@ label{
 Paquetes intermedio 
 */
 
-.img_intermedio_uno{
+.vista_img_intermedio_uno{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
     position: relative;
     bottom: 105px;
-            /* Imagen */
-            background-image: url(../img/img_paquetes/csumidero.jpeg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            /* Texto */
-            color: gray;
-            text-align: center;
-            font-family: Arial, Helvetica, sans-serif;
+    /* Imagen */
+    background-image: url(../img/img_paquetes/csumidero.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Texto */
+    color: gray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.img_intermedio_dos{
+.vista_img_intermedio_dos{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
@@ -225,7 +234,7 @@ Paquetes intermedio
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.img_intermedio_tres{
+.vista_img_intermedio_tres{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
@@ -241,7 +250,7 @@ Paquetes intermedio
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.paquete_intermedio{
+.vista_paquete_intermedio{
     background-color: rgba(255, 255, 255, 1);
     width: 999px;
     height: 415px;
@@ -255,7 +264,7 @@ Paquetes intermedio
     margin-left: 80px;
     position: relative;
 }
-.img_intermedio_cuatro{
+.vista_img_intermedio_cuatro{
     width: 952px;
     height: 247px;
     background-color: rgb(197, 196, 196);
@@ -272,21 +281,33 @@ Paquetes intermedio
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.titlelarge {
+.vista_titlelarge {
     text-align: left;
+    top: 200px;
     color: white;
-    padding-top: 95px;
+    width: 440px;
+    height: 50px;
+    position: absolute;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.textlarge {
+.vista_textlarge {
     /* Texto */
-    padding-top: 128px;
-    text-align: center;
+    position: relative;
     color: #f7dc6f;
+    width: 140px;
+    height: 50px;
+    top: 250px;
     font-weight: bolder;
     font-size: 45px;
     font-family: Arial, Helvetica, sans-serif;
+}
+.vista_p{
+    position: relative;
+    width: 100%px;
+    height: 40px;
+    left: 20px;
+    top: 200px;
 }
 /*
 Paquetes intermedio
@@ -295,12 +316,12 @@ Paquetes intermedio
 /*
 Paquetes Moderado
 */
-.seccion1_paquetes_mod {
+.vista_seccion1_paquetes_mod {
     display: flex;
     align-items: center; /* Alineación vertical */
    margin-left: 165px;
 }
-.img_moderado_uno{
+.vista_img_moderado_uno{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
@@ -316,7 +337,7 @@ Paquetes Moderado
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.img_moderado_dos{
+.vista_img_moderado_dos{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
@@ -332,14 +353,14 @@ Paquetes Moderado
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-.img_moderado_tres{
+.vista_img_moderado_tres{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
     position: relative;
     bottom: 105px;
 }
-.paquete_moderado{
+.vista_paquete_moderado{
     background-color: rgba(255, 255, 255, 1);
     width: 999px;
     height: 415px;
@@ -353,7 +374,7 @@ Paquetes Moderado
     margin-left: 80px;
     position: relative;
 }
-.img_moderado_cuatro{
+.vista_img_moderado_cuatro{
     width: 952px;
     height: 275px;
     background-color: rgb(197, 196, 196);

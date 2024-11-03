@@ -10,6 +10,11 @@ class indexController{
     public static function index(){
         require_once("vista/index.php");
     }
- 
+    public static function conocenos(){
+        require_once("vista/conocenos.php");
+    }
+    public static function blog(){
+        require_once("vista/blog.php");
+    }
 }
 ?>
