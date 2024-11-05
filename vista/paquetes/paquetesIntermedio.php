@@ -7,39 +7,39 @@
        
         <div class="vista_seccion1_paquetes">
             <div class="vista_paquete">
-                <div class="vista_img_one">
+                <div class="vista_img_intermedio_uno">
                     <div class="vista_titlepac">
-                        <h3><a href="detalle_paquete.html">¡CHIAPA DE CORZO!</a></h3>
+                        <h3><a href="detalle_paquete.html">¡CAÑON DEL SUMIDERO!</a></h3>
                     </div>
                     <div class="vista_text">
-                        <p>$8000</p>
+                        <p>$3500</p>
                     </div>
-                    <p class="vista_descripcion">2 DIAS 3 NOCHES</p>
-                    <p class="vista_descripcion">Conoce nuevas Emociones</p>
-                </div>
-            </div>
-            <div class="vista_paquete">
-                <div class="vista_img_two">
-                    <div class="vista_titlepac">
-                        <h3><a href="">¡PALENQUE!</a></h3>
-                    </div>
-                    <div class="vista_text">
-                        <p>$9100</p>
-                    </div>
-                    <p class="vista_descripcion">3 DIAS 4 NOCHES</p>
+                    <p class="vista_noches">2 DIAS 3 NOCHES</p>
                     <p class="vista_descripcion">Vive, conoce y disfruta Chiapas</p>
                 </div>
             </div>
             <div class="vista_paquete">
-                <div class="vista_img_thre">
+                <div class="vista_img_intermedio_dos">
                     <div class="vista_titlepac">
-                        <h3><a href="">¡SAN CRISTOBAL!</a></h3>
+                        <h3><a href="">¡EL ARCOTE!</a></h3>
                     </div>
                     <div class="vista_text">
-                        <p>$9000</p>
+                        <p>$5000</p>
                     </div>
-                    <p class="vista_descripcion">2 DIAS 3 NOCHES</p>
-                    <p class="vista_descripcion">Es la ciudad más importante de la Región de Los Altos de Chiapas​</p>
+                    <p class="vista_noches">2 DIAS 3 NOCHES</p>
+                    <p class="vista_descripcion">Vive, conoce y disfruta Chiapas</p>
+                </div>
+            </div>
+            <div class="vista_paquete">
+                <div class="vista_img_intermedio_tres">
+                    <div class="vista_titlepac">
+                        <h3><a href="">¡BONAMPAK!</a></h3>
+                    </div>
+                    <div class="vista_text">
+                        <p>$6200</p>
+                    </div>
+                    <p class="vista_noches">2 DIAS 3 NOCHES</p>
+                    <p class="vista_descripcion">Vive, conoce y disfruta Chiapas​</p>
                 </div>
             </div>
         </div>
@@ -52,8 +52,7 @@
                     <div class="vista_textlarge">
                         <p>$4700</p>
                     </div>
-                    <p class="vista_p">2 DIAS 3 NOCHES</p>
-                    <p class="vista_p">Vive, conoce y disfruta Chiapas</p>
+¿                    <p class="vista_p_inter"> 2 DIAS 3 NOCHES <br>Vive, conoce y disfruta Chiapas</p>
                 </div>
             </div>
         </div>

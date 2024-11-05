@@ -23,6 +23,7 @@
 .vista_sctg_paquete{
     text-decoration: none;
     color: rgba(117, 117, 117, 1);
+    font-size: 17px;
 }
 .vista_sctg_paquete :hover{
     border-bottom: 3px solid rgb(129, 129, 136);
@@ -94,7 +95,8 @@
 .vista_text{
     /* Texto */
     position: relative;
-    top: 135px;
+    top: 140px;
+    right: 38px;
     width: 180px;
     height: 80px;
     color: #f7dc6f;
@@ -104,9 +106,14 @@
 }
 .vista_descripcion{
     position: relative;
+    top: 110px;
+    line-height: 1.2;
+    text-align: center;  
+}
+.vista_noches{
+    position: relative;
     top: 120px;
-    line-height: 1.5;
-    text-align: center;    
+    background-color: hsl(48, 70%, 75%);
 }
 
 .vista_img_two{
@@ -302,12 +309,28 @@ Paquetes intermedio
     font-size: 45px;
     font-family: Arial, Helvetica, sans-serif;
 }
+.vista_textlarge_moderado{
+    position: relative;
+    color: #f7dc6f;
+    width: 140px;
+    height: 50px;
+    top: 270px;
+    font-weight: bolder;
+    font-size: 45px;
+}
 .vista_p{
     position: relative;
-    width: 100%px;
-    height: 40px;
-    left: 20px;
-    top: 200px;
+    width: 500px;
+    height: 100px;
+    left: 200px;
+    top: 230px;
+}
+.vista_p_inter{
+    position: relative;
+    width: 500px;
+    height: 100px;
+    left: 200px;
+    top: 190px;
 }
 /*
 Paquetes intermedio
@@ -359,6 +382,15 @@ Paquetes Moderado
     background-color: rgb(197, 196, 196);
     position: relative;
     bottom: 105px;
+    /* Imagen */
+    background-image: url(../img/img_paquetes/cristocopoya.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Texto */
+    color: gray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .vista_paquete_moderado{
     background-color: rgba(255, 255, 255, 1);

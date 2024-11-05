@@ -6,38 +6,38 @@
        
         <div class="vista_seccion1_paquetes">
             <div class="vista_paquete">
-                <div class="vista_img_one">
+                <div class="vista_img_moderado_uno">
                     <div class="vista_titlepac">
-                        <h3><a href="detalle_paquete.html">¡CHIAPA DE CORZO!</a></h3>
+                        <h3><a href="detalle_paquete.html">¡PARQUE DE LA MARIMBA!</a></h3>
                     </div>
                     <div class="vista_text">
-                        <p>$8000</p>
+                        <p>$1600</p>
                     </div>
-                    <p class="vista_descripcion">2 DIAS 3 NOCHES</p>
+                    <p class="vista_noches">1 DIAS 2 NOCHES</p>
                     <p class="vista_descripcion">Conoce nuevas Emociones</p>
                 </div>
             </div>
             <div class="vista_paquete">
-                <div class="vista_img_two">
+                <div class="vista_img_moderado_dos">
                     <div class="vista_titlepac">
-                        <h3><a href="">¡PALENQUE!</a></h3>
+                        <h3><a href="">¡CRISTO DE COPOYA!</a></h3>
                     </div>
                     <div class="vista_text">
-                        <p>$9100</p>
+                        <p>$2900</p>
                     </div>
-                    <p class="vista_descripcion">3 DIAS 4 NOCHES</p>
+                    <p class="vista_noches">1 DIAS 4 NOCHES</p>
                     <p class="vista_descripcion">Vive, conoce y disfruta Chiapas</p>
                 </div>
             </div>
             <div class="vista_paquete">
-                <div class="vista_img_thre">
+                <div class="vista_img_moderado_tres">
                     <div class="vista_titlepac">
                         <h3><a href="">¡SAN CRISTOBAL!</a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$9000</p>
                     </div>
-                    <p class="vista_descripcion">2 DIAS 3 NOCHES</p>
+                    <p class="vista_noches">2 DIAS 3 NOCHES</p>
                     <p class="vista_descripcion">Es la ciudad más importante de la Región de Los Altos de Chiapas​</p>
                 </div>
             </div>
@@ -48,11 +48,10 @@
                     <div class="vista_titlelarge">
                         <h3><a href="">¡ZOOLOGICO MIGUEL ALVAREZ DEL TORO!</a></h3>
                     </div>
-                    <div class="vista_textlarge">
+                    <div class="vista_textlarge_moderado">
                         <p>$1500</p>
                     </div>
-                    <p class="vista_p">1 DIAS 2 NOCHES</p>
-                    <p class="vista_p">Vive, conoce y disfruta Chiapas</p>
+                    <p class="vista_p"> 1 DIAS 2 NOCHES <br> Vive, conoce y disfruta Chiapas</p>
                 </div>
             </div>
         </div>
