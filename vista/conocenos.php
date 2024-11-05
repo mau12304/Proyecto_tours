@@ -86,7 +86,7 @@
             </div>
             <div class="conocenos_team-member">
                 <img src="vista/img/conocenos/sergio-rivera.png" alt="Sergio Rivera">
-                <p class="conocenos_conocenos_name">Sergio Rivera</p>
+                <p class="conocenos_name">Sergio Rivera</p>
                 <p class="conocenos_position">CEO</p>
             </div>
             <div class="conocenos_team-member">
