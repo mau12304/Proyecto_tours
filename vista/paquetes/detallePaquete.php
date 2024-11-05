@@ -14,7 +14,7 @@
 
             <div class="detalle_del_dia">
                 <div class="detalle_dia">
-                <h3>Día-1 Lunes</h3>
+                <h3>Día-01</h3>
                 <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">PARQUE NACIONAL CAÑÓN DEL SUMIDERO</h4>
                 <p>Recepción en el aeropuerto de Tuxtla Gutiérrez – 
                     visita en el parque nacional Cañón del Sumidero – 
@@ -24,22 +24,21 @@
             </div>
             <div class="detalle_del_dia">
                 <div class="detalle_dia">
-                <h3>Día-1 Lunes</h3>
-                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">PARQUE NACIONAL CAÑÓN DEL SUMIDERO</h4>
-                <p>Recepción en el aeropuerto de Tuxtla Gutiérrez – 
-                    visita en el parque nacional Cañón del Sumidero – 
-                    visita Chiapa de Corzo – check in en el hotel de San 
-                    Cristóbal de las Casas (se recomienda tomar un vuelo matutino).</p>
+                <h3>Día-02</h3>
+                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">LAGOS DE MONTEBELLO</h4>
+                <p>Salida a las 08:00 am y regreso aprox. 09:00 pm. 
+                    Desayuno en el hotel y comenzamos la visita al centro 
+                    Ecoturístico Cascadas el Chiflón - Visita al parque nacional Lagos de Montebello.</p>
                 </div>
             </div>
             <div class="detalle_del_dia">
                 <div class="detalle_dia">
-                <h3>Día-1 Lunes</h3>
-                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt=""> PARQUE NACIONAL CAÑÓN DEL SUMIDERO</h4>
-                <p>Recepción en el aeropuerto de Tuxtla Gutiérrez – 
-                    visita en el parque nacional Cañón del Sumidero – 
-                    visita Chiapa de Corzo – check in en el hotel de San 
-                    Cristóbal de las Casas (se recomienda tomar un vuelo matutino).</p>
+                <h3>Día-03</h3>
+                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt=""> ZONA ARQUEOLÓGICA DE PALENQUE</h4>
+                <p>Salida a las 05:00 am y regreso aprox. 10:00 pm. 
+                Desayuno en ruta incluida, y comenzamos la vista de 
+                las cascadas de Agua Azul. Se visita la cascada de Misol-Há 
+                y finalmente a la Zona Arqueológica de Palenque.</p>
                 </div>
             </div>
         </div>
@@ -78,8 +77,7 @@
                 </div>
                 <div class="detalle_form_campos">
                     <input type="tel" name="telefono" placeholder="Teléfono" required>
-                    <input type="number" name="adultos" placeholder="Adultos" required min="1">
-                    <input type="number" name="menores" placeholder="Menores" min="0">
+                    <input type="number" name="Personas" placeholder="No. Personas" required min="1">
                 </div>
                 <textarea name="comentarios" placeholder="Comentarios"></textarea>
                 <button type="submit">ENVIAR</button>
