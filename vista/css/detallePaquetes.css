@@ -136,15 +136,15 @@
 /*Formulario*/
 .detalle_form_contenido {
     background-color: rgb(193, 199, 199);
-    width: 500px;
-    padding: 50px;
+    width: 590px;
+    padding: 30px;
     border-radius: 10px;
     color: white;
     text-align: center;
     position: relative;
-    left: 900px;
-    bottom: 1610px;
-    height: 700px;
+    left: 850px;
+    bottom: 1690px;
+    height: 480px;
 }
 
 .detalle_form_titulo{
@@ -162,6 +162,7 @@
 }
 
 .detalle_form_campos{
+    display: flex;
     gap: 10px;
     margin-bottom: 30px;
 
