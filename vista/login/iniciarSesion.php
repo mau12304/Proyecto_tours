@@ -1,19 +1,19 @@
 <?php require_once('vista/layout/header.php'); ?>
 
 <article class="sesion">
-    <form action="IniciarSesion.php" method="POST">
+    <form action="index.php?l=login" method="POST">
                 <h1>Iniciar Sesión</h1>
                 <hr>
                 <i class="fa-solid fa-user"></i>
-                <label>Usuario</label>
-                <input type="text" name="Usuario" placeholder="Nombre de usuario">
+                <label for="usuario">Usuario</label>
+                <input type="text" name="usuario"  id="usuario" placeholder="Nombre de usuario">
         
                 <i class="fa-solid fa-unlock"></i>
-                <label>Contraseña</label>
-                <input type="text" name="Contraseña" placeholder="Clave">
+                <label for="contraseña">Contraseña</label>
+                <input type="text" name="contraseña" id="contraseña" placeholder="Clave">
                 <hr>
-                <a class="ini" href="index.php?i=index">Ingresar</a>
-                <a href="index.php?r=hacerregistro">Registrarse</a>
+                <button type="submit" class="ini">Ingresar</button>
+                <a href="index.php?l=hacerregistro">Registrarse</a>
         </form>
 </article>
 <?php require_once('vista/layout/footer.php');?>

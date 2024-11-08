@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+// Verifica si el usuario está autenticado y es cliente o empleado
+$isAuthenticated = isset($_SESSION['tipo_usuario']);
+$isEmployee = $isAuthenticated && $_SESSION['tipo_usuario'] === 'empleado';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,15 +31,22 @@
         <!--Jeshua-->
         
         <!--Victor-->
-        <nav>
-            <ul>
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="index.php?p=mostrarpaquetes">Paquetes Turisticos</a></li>
-                <li><a href="index.php?i=blog">Blog</a></li>
-                <li><a href="index.php?i=conocenos">Conocenos</a></li>
-                <li><a href="index.php?l=iniciarsesion">Iniciar sesión</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <a href="index.php">Inicio</a>
+            <a href="index.php?p=mostrarpaquetes">Paquetes Turisticos</a>
+            <a href="index.php?i=blog">Blog</a>
+            <a href="index.php?i=conocenos">Conocenos</a>
+            <?php if ($isEmployee):?>
+            <a href="index.php?i=editar">Editar</a>
+            <?php endif; ?>
+            <?php if ($isAuthenticated): ?>
+            <a href="index.php?l=logout">Cerrar Sesión</a>
+            <?php else: ?>
+            <a href="index.php?l=iniciarsesion">Iniciar sesión</a>
+            <?php endif; ?>
+        </ul>
+    </nav>
         <!--Victor-->  
 </header>
    
