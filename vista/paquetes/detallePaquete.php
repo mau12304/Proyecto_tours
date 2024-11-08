@@ -1,4 +1,18 @@
 <?php require_once('vista/layout/header.php'); ?>
+
+<script>
+        function calcularTotal() {
+            // Obtener el número de pasajeros y el precio por persona
+            const numPasajeros = document.getElementById("personas").value;
+            const precioPersona = document.getElementById("precioPersona").value;
+            
+            // Calcular el total
+            const total = numPasajeros * precioPersona;
+            
+            // Mostrar el total en el campo correspondiente
+            document.getElementById("total").value = total;
+        }
+</script>
     <article class="detalle_paquetes">
         <div class="detalle_borde">
 
@@ -77,10 +91,16 @@
                 </div>
                 <div class="detalle_form_campos">
                     <input type="tel" name="telefono" placeholder="Teléfono" required>
-                    <input type="number" name="Personas" placeholder="No. Personas" required min="1">
+                    <input type="number" id="personas" name="personas" placeholder="No.Personas" required min="1" oninput="calcularTotal()" required>
+                </div>
+                <div class="detalle_form_campos3">
+                    <label for="precioPersona">Precio</label>
+                    <input type="number" id="precioPersona" name="precioPersona" value="1250" readonly>
+                    <label for="Total">Total</label>
+                    <input type="text" id="total" name="total" readonly>
                 </div>
                 <textarea name="comentarios" placeholder="Comentarios"></textarea>
-                <button type="submit">ENVIAR</button>
+                <button type="submit">Comprar</button>
             </form>
         </div>
     </article>

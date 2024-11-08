@@ -136,7 +136,7 @@
 /*Formulario*/
 .detalle_form_contenido {
     background-color: rgb(193, 199, 199);
-    width: 590px;
+    width: 470px;
     padding: 30px;
     border-radius: 10px;
     color: white;
@@ -144,7 +144,7 @@
     position: relative;
     left: 850px;
     bottom: 1690px;
-    height: 480px;
+    height: 550px;
 }
 
 .detalle_form_titulo{
@@ -167,6 +167,17 @@
     margin-bottom: 30px;
 
 }
+.detalle_form_campos3{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+
+}
+.detalle_form_campos3 input{
+    width: 50px;
+    height: 50px;
+}
+
 .detalle_formulario{
     margin-top: 20px;
 }

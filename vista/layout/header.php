@@ -19,7 +19,7 @@ $isEmployee = $isAuthenticated && $_SESSION['tipo_usuario'] === 'empleado';
     <link rel="stylesheet" href="vista/css/styleconocenos.css">
     <link rel="stylesheet" href="Vista/css/style_paquetes.css">
     <link rel="stylesheet" href="vista/css/styleblog.css">
-    <link rel="stylesheet" href="vista/css/detallePaquetes.css">
+    <link rel="stylesheet" href="Vista/css/detallePaquetes.css">
 
 </head>
 <body>
