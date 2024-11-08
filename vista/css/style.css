@@ -34,7 +34,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 1000; 
-    margin-left: 20px;
+    
 }
 nav ul {
     list-style-type: none;
