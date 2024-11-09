@@ -90,7 +90,7 @@
     text-align: center;
     position: relative;
     left: 790px;
-    bottom: 1790px;
+    bottom: 1690px;
 }
 
 .detalle_tabla_contenido table {
@@ -120,7 +120,7 @@
 /*Nota de la tabla*/
 .detalle_nota{
     position: relative;
-    bottom: 15px;
+    bottom: 0px;
     right: 155px;
 }
 .detalle_nota p {
@@ -143,7 +143,7 @@
     text-align: center;
     position: relative;
     left: 850px;
-    bottom: 1690px;
+    bottom: 1590px;
     height: 550px;
 }
 

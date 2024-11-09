@@ -84,14 +84,15 @@
             <div class="detalle_form_titulo">
                 <h1>RESERVAR PAQUETE</h1>
             </div>
-            <form action="process_reservation.php" method="post" class="detalle_formulario">
+            <form action=""  class="detalle_formulario">
                 <div class="detalle_form_campos">
-                    <input type="text" name="nombre" placeholder="Nombre" required>
-                    <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                    <input type="text" name="apellido" id="apellido"  placeholder="Apellido" required>
+                    <input type="email" name="correo" id="correo" placeholder="Correo Electrónico" required>
                 </div>
                 <div class="detalle_form_campos">
-                    <input type="tel" name="telefono" placeholder="Teléfono" required>
-                    <input type="number" id="personas" name="personas" placeholder="No.Personas" required min="1" oninput="calcularTotal()" required>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>
+                    <input type="number" name="personas" id="personas" placeholder="No.Personas" required min="1" oninput="calcularTotal()" required>
                 </div>
                 <div class="detalle_form_campos3">
                     <label for="precioPersona">Precio</label>
@@ -99,8 +100,9 @@
                     <label for="Total">Total</label>
                     <input type="text" id="total" name="total" readonly>
                 </div>
-                <textarea name="comentarios" placeholder="Comentarios"></textarea>
-                <button type="submit">Comprar</button>
+                <textarea name="comentarios" id="comentarios" placeholder="Comentarios"></textarea>
+                <input type="submit" value="Comprar">
+                <input type="hidden" name="r" value="reservar">
             </form>
         </div>
     </article>

@@ -20,13 +20,13 @@ class loginController{
         $contrasena = $_POST['contraseña'];
 
         $userModel = new loginModel();
-        $tipoUsuario = $userModel->authenticate($usuario, $contrasena);
+        $tipoUsuario = $userModel->iniciarsesion($usuario, $contrasena);
         
-        if ($tipoUsuario) {
+        if ($tipoUsuario === 'empleado' || $tipoUsuario === 'cliente') {
             $_SESSION['tipo_usuario'] = $tipoUsuario;
             require_once('vista/index.php');
-        } else {
-            require_once('vista/login/iniciarSesion.php?error=1');
+        } elseif ($tipoUsuario === 'Regístrate para acceder') {
+            require_once('vista/login/hacerRegistro.php');
         }
         exit();
     }

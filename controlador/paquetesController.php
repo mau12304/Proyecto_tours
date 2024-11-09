@@ -17,5 +17,8 @@ class PaquetesController{
     public static function mostradetallepaquete(){
         require_once('vista/paquetes/detallePaquete.php');
     }
+
+    
+    
 }
 ?>

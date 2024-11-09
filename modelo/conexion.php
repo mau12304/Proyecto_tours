@@ -1,9 +1,9 @@
 <?php
 class Conexion extends PDO{
     private $hostBD='localhost';
-    private $nombreBD='almacen';
+    private $nombreBD='turitux';
     private $usuarioBD='root';
-    private $passwordBD='';
+    private $passwordBD='mau060602';
     public function __construct(){
         try {
             parent::__construct('mysql:host='.$this->hostBD.';dbname='.$this->nombreBD.';charset=utf8',$this->usuarioBD,$this->passwordBD,
