@@ -17,8 +17,16 @@ class PaquetesController{
     public static function mostradetallepaquete(){
         require_once('vista/paquetes/detallePaquete.php');
     }
+    public static function editarPaquetes(){
+        $modelconsultar = new paquetesModel();
+        $datos = $modelconsultar->mostrartablaPaquete();
+        $detallepaquete = $modelconsultar->mostrartabladetallePaquete();
+        $tiposervicio = $modelconsultar->mostrarTiposervicio();
+        $servicios= $modelconsultar->mostrarServicios();
+        require('vista/configPaquetes/editarPaquetes.php');
 
-    
+    }
+
     
 }
 ?>

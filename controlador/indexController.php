@@ -16,8 +16,6 @@ class indexController{
     public static function blog(){
         require_once("vista/blog.php");
     }
-    public static function editar(){
-        require_once("vista/editarPaquetes/editar.php");
-    }
+    
 }
 ?>

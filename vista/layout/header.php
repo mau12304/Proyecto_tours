@@ -38,7 +38,10 @@ $isEmployee = $isAuthenticated && $_SESSION['tipo_usuario'] === 'empleado';
             <a href="index.php?i=blog">Blog</a>
             <a href="index.php?i=conocenos">Conocenos</a>
             <?php if ($isEmployee):?>
-            <a href="index.php?i=editar">Editar</a>
+            <a href="index.php?p=editarPaquetes">Editar Paquetes y Servicios</a>
+            <?php endif; ?>
+            <?php if ($isEmployee):?>
+            <a href="index.php?d=editarDatos">Datos</a>
             <?php endif; ?>
             <?php if ($isAuthenticated): ?>
             <a href="index.php?l=logout">Cerrar Sesión</a>
