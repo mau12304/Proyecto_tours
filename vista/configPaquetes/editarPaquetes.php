@@ -8,7 +8,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
 ?>
 <h1>Lista de paquetes</h1>
 <div>
-    <a href="index.php?p=agregarpaquetes">Agregar</a>
+    <a href="index.php?p=agregarPaquete">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -36,7 +36,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
 <br>
 <h1>Detalle de los paquetes</h1>
 <div>
-    <a href="index.php?p=agregarpaquetes">Agregar</a>
+    <a href="index.php?p=detallarPaquete">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -75,7 +75,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
 <br>
 <h1>Tipo de servicio</h1>
 <div>
-    <a href="index.php?p=agregarpaquetes">Agregar</a>
+    <a href="index.php?p=agregarTipo">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -102,7 +102,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
 </div>
 <h1>Servicios</h1>
 <div>
-    <a href="index.php?p=agregarpaquetes">Agregar</a>
+    <a href="index.php?p=agregarServicios">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>

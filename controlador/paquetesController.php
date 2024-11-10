@@ -24,9 +24,53 @@ class PaquetesController{
         $tiposervicio = $modelconsultar->mostrarTiposervicio();
         $servicios= $modelconsultar->mostrarServicios();
         require('vista/configPaquetes/editarPaquetes.php');
-
     }
-
+    public static function agregarPaquete(){
+        require('vista/configPaquetes/agregarPaquete.php');
+    }
+    public static function detallarPaquete(){
+        require('vista/configPaquetes/detallarPaquete.php');
+    }
+    public static function agregarTipo(){
+        require('vista/configPaquetes/agregarTipo.php');
+    }
+    public static function agregarServicios(){
+        require('vista/configPaquetes/agregarServicios.php');
+    }
+    public static function guardarPaquete(){
+        $nombre=$_REQUEST['nombre'];
+        $costo=$_REQUEST['costo'];
+        
+        $modelpaquete = new PaquetesModel();
+        $modelpaquete->agregarPaquete($nombre, $costo);
+        header("location:".urlsite."index.php?p=editarPaquetes");
+    }
+    public static function guardarDetalles(){
+        $id_paquete = $_REQUEST['id_paquete'];
+        $id_servicio = $_REQUEST['id_servicio'];
+        $id_tipo_servicio= $_REQUEST['id_tipo_servicio'];
+        $hora_salida = $_REQUEST['hora_salida'];
+        $hora_llegada = $_REQUEST['hora_llegada'];
+        $cupo_max = $_REQUEST['cupo_max'];
+        $modeldetalles = new PaquetesModel();
+        $modeldetalles->agregarDetalles($id_paquete,$id_servicio,$id_tipo_servicio,$hora_salida,$hora_llegada,$cupo_max);
+        header("location:".urlsite."index.php?p=editarPaquetes");
+    }
+    public static function guardarTipo(){
+        $id_tipo_servicio=$_REQUEST['id_tipo_servicio'];
+        $nombre=$_REQUEST['nombre'];
+        $modelTipo = new PaquetesModel();
+        $modelTipo->agregarTipo($id_tipo_servicio, $nombre);
+        header("location:".urlsite."index.php?p=editarPaquetes");
+    }
+    public static function guardarServicios(){
+        $id_servicios=$_REQUEST['id_servicios'];
+        $nombre=$_REQUEST['nombre'];
+        $descripcion=$_REQUEST['descripcion'];
+        $modelServicios = new PaquetesModel();
+        $modelServicios->agregarServicios($id_servicios, $nombre, $descripcion);
+        header("location:".urlsite."index.php?p=editarPaquetes");
+    }
     
 }
 ?>
