@@ -6,7 +6,7 @@
     <label for="id_servicio">id_servicio</label>
     <input type="number" id="id_servicio" name="id_servicio"><br><br>
     <label for="id_tipo_servicio">id_tipo_servicio</label>
-    <input type="time" id="id_tipo_servicio" name="id_tipo_servicio"><br><br>
+    <input type="number" id="id_tipo_servicio" name="id_tipo_servicio"><br><br>
     <label for="hora_salida">hora_salida</label>
     <input type="time" id="hora_salida" name="hora_salida"><br><br>
     <label for="hora_llegada">hora_llegada</label>

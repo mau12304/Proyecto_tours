@@ -7,7 +7,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
 ?>
 <h1>Lista de Empleados</h1>
 <div>
-    <a href="index.php?p=agregarpaquetes">Agregar</a>
+    <a href="index.php?d=agregarEmpleado">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
