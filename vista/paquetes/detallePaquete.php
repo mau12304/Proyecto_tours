@@ -86,9 +86,7 @@
             </div>
             <form action=""  class="detalle_formulario">
                 <div class="detalle_form_campos">
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
-                    <input type="text" name="apellido" id="apellido"  placeholder="Apellido" required>
-                    <input type="email" name="correo" id="correo" placeholder="Correo Electrónico" required>
+                   
                 </div>
                 <div class="detalle_form_campos">
                     <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>

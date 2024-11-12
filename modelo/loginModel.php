@@ -23,8 +23,12 @@ class loginModel{
         $resultado->bindParam(':contrasena', $contrasena);
         $resultado->execute();
         
-        // Verificar si el usuario existe en usuarios_cliente
+
         if ($resultado->rowCount() > 0) {
+            // Obtener el ID del cliente
+            $cliente = $resultado->fetch(PDO::FETCH_ASSOC);
+            $_SESSION['id_user_client'] = $cliente['id_user_client']; // Guardar ID en la sesión
+    
             return 'cliente';
         }
         // Si no existe en ninguna de las tablas

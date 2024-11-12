@@ -9,16 +9,20 @@ class ReservaController{
         require_once('vista/paquetes/detallePaquete.php');
     }
     public static function reservar(){
-        $nombre=$_REQUEST['nombre'];
-        $apellido=$_REQUEST['apellido'];
-        $telefono=$_REQUEST['telefono'];
-        $correo=$_REQUEST['correo'];
+        session_start(); // Iniciar sesión para acceder al ID del cliente
+
+        // Verificar si el cliente está en sesión
+        if (!isset($_SESSION['id_user_client'])) {
+            throw new Exception("No se ha iniciado sesión como cliente.");
+        }
+        $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
+       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=1;
         $modelReserva = new ReservaModel();
-        $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $nombre, $apellido, $telefono, $correo);
+        $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
         header("location:".urlsite."index.php?r=mostradetallepaquete");
 
     }
