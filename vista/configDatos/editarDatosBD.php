@@ -36,8 +36,8 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
                             echo "<td>".$va['genero']."</td>";
                             echo "<td>".$va['telefono']."</td>";
                             echo "<td>".$va['correo']."</td>";
-                            echo "<td><a href='index.php?p=actualizar&id=".$va['id_empleado']."'>ACTUALIZAR</a> 
-                            <a href='index.php?p=eliminar&id=".$va['id_empleado']."'>ELIMINAR</a></td>";
+                            echo "<td><a href='index.php?d=actualizarEmpleado&id_empleado=".$va['id_empleado']."'>ACTUALIZAR</a> 
+                            <a href='index.php?d=eliminarEmpleado&id_empleado=".$va['id_empleado']."'>ELIMINAR</a></td>";
                             echo "</tr>";
                         endforeach;
                     ?>      

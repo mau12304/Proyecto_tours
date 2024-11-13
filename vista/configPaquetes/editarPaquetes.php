@@ -25,8 +25,8 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
                             echo "<tr><td>".$va['id_paquete']."</td>";
                             echo "<td>".$va['nombre']."</td>";
                             echo "<td>".$va['costo']."</td>";
-                            echo "<td><a href='index.php?p=actualizar&id_paquete=".$va['id_paquete']."'>ACTUALIZAR</a> 
-                            <a href='index.php?p=eliminar&id=".$va['id_paquete']."'>ELIMINAR</a></td>";
+                            echo "<td><a href='index.php?p=actualizarPaquete&id_paquete=".$va['id_paquete']."'>ACTUALIZAR</a> 
+                            <a href='index.php?p=eliminarPaquete&id_paquete=".$va['id_paquete']."'>ELIMINAR</a></td>";
                             echo "</tr>";
                         endforeach;
                     ?>      
@@ -64,8 +64,8 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
                             echo "<td>".$va['fecha']."</td>";
                             echo "<td>".$va['cupo_max']."</td>";
 
-                            echo "<td><a href='index.php?p=actualizar&id=".$va['id_detalle_paquete']."'>ACTUALIZAR</a> 
-                            <a href='index.php?p=eliminar&id=".$va['id_detalle_paquete']."'>ELIMINAR</a></td>";
+                            echo "<td><a href='index.php?p=actualizarDetalle&id_detalle_paquete=".$va['id_detalle_paquete']."'>ACTUALIZAR</a> 
+                            <a href='index.php?p=eliminarDetalle&id_detalle_paquete=".$va['id_detalle_paquete']."'>ELIMINAR</a></td>";
                             echo "</tr>";
                         endforeach;
                     ?>      
@@ -92,8 +92,8 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
                             echo "<td>".$va['nombre']."</td>";
                            
 
-                            echo "<td><a href='index.php?p=actualizar&id=".$va['id_tipo_servicio']."'>ACTUALIZAR</a> 
-                            <a href='index.php?p=eliminar&id=".$va['id_tipo_servicio']."'>ELIMINAR</a></td>";
+                            echo "<td><a href='index.php?p=actualizarTipo&id_tipo_servicio=".$va['id_tipo_servicio']."'>ACTUALIZAR</a> 
+                            <a href='index.php?p=eliminarTipo&id_tipo_servicio=".$va['id_tipo_servicio']."'>ELIMINAR</a></td>";
                             echo "</tr>";
                         endforeach;
                     ?>      
@@ -119,8 +119,8 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
                             echo "<tr><td>".$va['id_servicios']."</td>";
                             echo "<td>".$va['nombre']."</td>";
                             echo "<td>".$va['descripcion']."</td>";
-                            echo "<td><a href='index.php?p=actualizar&id=".$va['id_servicios']."'>ACTUALIZAR</a> 
-                            <a href='index.php?p=eliminar&id=".$va['id_servicios']."'>ELIMINAR</a></td>";
+                            echo "<td><a href='index.php?p=actualizarServicios&id_servicios=".$va['id_servicios']."'>ACTUALIZAR</a> 
+                            <a href='index.php?p=eliminarServicios&id_servicios=".$va['id_servicios']."'>ELIMINAR</a></td>";
                             echo "</tr>";
                         endforeach;
                     ?>      

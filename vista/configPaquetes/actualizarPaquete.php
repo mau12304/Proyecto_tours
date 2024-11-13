@@ -18,7 +18,7 @@
     <label for="costo">Precio</label>
     <input type="number" id="costo" name="costo" value="<?= $costo?>"><br><br>
     <input type="submit" value="Actualizar">
-    <input type="hidden" name="p" value="actualizarPaquete">
+    <input type="hidden" name="p" value="modificarPaquete">
 
 </form>
 
