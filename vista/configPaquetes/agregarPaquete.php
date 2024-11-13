@@ -5,7 +5,7 @@
     <input type="text" id="nombre" name="nombre"><br><br>
     <label for="costo">Precio</label>
     <input type="number" id="costo" name="costo"><br><br>
-    <input type="submit" value="Registrar">
+    <input type="submit" value="Actualizar">
     <input type="hidden" name="p" value="guardarPaquete">
 
 </form>

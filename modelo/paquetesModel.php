@@ -71,7 +71,7 @@ class PaquetesModel{
     public function agregarDetalles($id_paquete, $id_servicio, $id_tipo_servicio, $hora_salida, $hora_llegada, $cupo_max){
         include_once('conexion.php');
         $cnn=new Conexion();
-        $consulta="INSERT INTO detalle_paquete (id_paquete, id_servicio, id_tipo_servicio, hora_salida, hora_llegada, cupo_max)
+        $consulta="INSERT INTO detalle_paquete (id_paquete, id_servicios, id_tipo_servicio, hora_salida, hora_llegada, cupo_max)
         VALUES ('$id_paquete', '$id_servicio', '$id_tipo_servicio', '$hora_salida', '$hora_llegada', '$cupo_max');";
         $resultado=$cnn->prepare($consulta);
         $resultado->execute();
@@ -104,6 +104,29 @@ class PaquetesModel{
         if($resultado){
             return true;
         }else{
+            return false;
+        }
+    }
+    public function obtenerPaquete($id_paquete){
+        include_once('conexion.php');
+        $cnn=new Conexion();
+        $consulta="select * from Paquete WHERE id_paquete=".$id_paquete.";";
+        $resultado=$cnn->prepare($consulta);
+        $resultado->execute(); 
+        while($filas = $resultado->FETCHALL(PDO::FETCH_ASSOC)) {
+                $this->listaPaquetes[]=$filas;
+        }
+        return $this->listaPaquetes;
+    }
+    public function actualizarPaquete($id_paquete, $nombre, $costo){
+        include_once('conexion.php');
+        $cnn = new Conexion();
+        $consulta = "UPDATE Paquete SET nombre = '".$nombre."', costo = ".$costo." WHERE id_paquete = ".$id_paquete;
+        $resultado = $cnn->prepare($consulta);
+        $resultado->execute();
+        if ($resultado) {
+            return true;
+        } else {
             return false;
         }
     }

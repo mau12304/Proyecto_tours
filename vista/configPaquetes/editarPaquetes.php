@@ -25,7 +25,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
                             echo "<tr><td>".$va['id_paquete']."</td>";
                             echo "<td>".$va['nombre']."</td>";
                             echo "<td>".$va['costo']."</td>";
-                            echo "<td><a href='index.php?p=actualizar&id=".$va['id_paquete']."'>ACTUALIZAR</a> 
+                            echo "<td><a href='index.php?p=actualizar&id_paquete=".$va['id_paquete']."'>ACTUALIZAR</a> 
                             <a href='index.php?p=eliminar&id=".$va['id_paquete']."'>ELIMINAR</a></td>";
                             echo "</tr>";
                         endforeach;

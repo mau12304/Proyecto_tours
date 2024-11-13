@@ -25,6 +25,12 @@ class PaquetesController{
         $servicios= $modelconsultar->mostrarServicios();
         require('vista/configPaquetes/editarPaquetes.php');
     }
+    public static function actualizar(){
+        $id_paquete=$_REQUEST['id_paquete'];
+        $modelpaquete = new PaquetesModel();
+        $datos=$modelpaquete->obtenerPaquete($id_paquete);
+        require_once('vista/configPaquetes/actualizarPaquete.php');
+    }
     public static function agregarPaquete(){
         require('vista/configPaquetes/agregarPaquete.php');
     }
@@ -69,6 +75,14 @@ class PaquetesController{
         $descripcion=$_REQUEST['descripcion'];
         $modelServicios = new PaquetesModel();
         $modelServicios->agregarServicios($id_servicios, $nombre, $descripcion);
+        header("location:".urlsite."index.php?p=editarPaquetes");
+    }
+    public static function actualizarPaquete(){
+        $id_paquete=$_REQUEST['id_paquete'];
+        $nombre=$_REQUEST['nombre'];
+        $costo=$_REQUEST['costo'];
+        $modelpaquete = new PaquetesModel();
+        $modelpaquete->actualizarPaquete($id_paquete,$nombre, $costo);
         header("location:".urlsite."index.php?p=editarPaquetes");
     }
     
