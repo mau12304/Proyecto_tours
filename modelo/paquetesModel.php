@@ -168,7 +168,6 @@ class PaquetesModel{
         include_once('conexion.php');
         $cnn = new Conexion();
     
-        // Construcción de la consulta con concatenación correcta
         $consulta = "UPDATE detalle_paquete SET id_paquete = '" . $id_paquete . 
                     "', id_servicios = '" . $id_servicio . 
                     "', id_tipo_servicio = '" . $id_tipo_servicio . 
