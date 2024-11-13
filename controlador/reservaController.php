@@ -9,7 +9,6 @@ class ReservaController{
         require_once('vista/paquetes/detallePaquete.php');
     }
     public static function reservar(){
-        session_start(); // Iniciar sesión para acceder al ID del cliente
 
         // Verificar si el cliente está en sesión
         if (!isset($_SESSION['id_user_client'])) {

@@ -12,7 +12,7 @@
 
 <form action="">
     <label for="id_user_client">id_user_client</label>
-    <input type="number" id="id_user_client" name="id_user_client"  readonly="<?= $id_user_client?>"><br><br>
+    <input type="number" id="id_user_client" name="id_user_client"  readonly value="<?= $id_user_client?>"><br><br>
     <label for="username">username</label>
     <input type="text" id="username" name="username" value="<?= $username ?>"><br><br>
     <label for="password">password</label>

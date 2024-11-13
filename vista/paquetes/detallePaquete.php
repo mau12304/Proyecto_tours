@@ -1,5 +1,4 @@
 <?php require_once('vista/layout/header.php'); ?>
-
 <script>
         function calcularTotal() {
             // Obtener el número de pasajeros y el precio por persona
@@ -84,11 +83,14 @@
             <div class="detalle_form_titulo">
                 <h1>RESERVAR PAQUETE</h1>
             </div>
-            <form action=""  class="detalle_formulario">
+                <?php if (isset($_GET['error'])): ?>
+                <p class="error-msg"><?php echo htmlspecialchars($_GET['error'], ENT_QUOTES, 'UTF-8'); ?></p>
+                <?php endif; ?>
+            <form action=""  class="detalle_formulario" onsubmit="return verificarSesion()">
                 <div class="detalle_form_campos">
                    
                 </div>
-                <div class="detalle_form_campos">
+                <div class="detalle_form_campos" >
                     <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>
                     <input type="number" name="personas" id="personas" placeholder="No.Personas" required min="1" oninput="calcularTotal()" required>
                 </div>
@@ -103,5 +105,16 @@
                 <input type="hidden" name="r" value="reservar">
             </form>
         </div>
+        <script>
+    // Verificar la sesión antes de enviar el formulario
+    function verificarSesion() {
+        const loggedIn = <?php echo json_encode(isset($_SESSION['id_user_client'])); ?>;
+        if (!loggedIn) {
+            alert('Debe iniciar sesión antes de realizar la compra.');
+            return false; // Detener el envío del formulario
+        }
+        return true; // Permitir el envío
+    }
+</script>
     </article>
 <?php require_once('vista/layout/footer.php'); ?>
