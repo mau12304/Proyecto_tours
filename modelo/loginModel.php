@@ -25,10 +25,12 @@ class loginModel{
         
 
         if ($resultado->rowCount() > 0) {
-            // Obtener el ID del cliente
+            // Obtener los datos del cliente
             $cliente = $resultado->fetch(PDO::FETCH_ASSOC);
-            $_SESSION['id_user_client'] = $cliente['id_user_client']; // Guardar ID en la sesión
-    
+            $_SESSION['id_user_client'] = $cliente['id_user_client'];     // Guardar ID en sesión
+            $_SESSION['nombre_usuario'] = $cliente['username'];               // Guardar nombre en sesión
+            $_SESSION['tipo_usuario'] = 'cliente';    
+        
             return 'cliente';
         }
         // Si no existe en ninguna de las tablas

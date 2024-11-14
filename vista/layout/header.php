@@ -4,6 +4,10 @@
 $isAuthenticated = isset($_SESSION['tipo_usuario']);
 $isEmployee = $isAuthenticated && $_SESSION['tipo_usuario'] === 'empleado';
 $isClient = $isAuthenticated && $_SESSION['tipo_usuario'] === 'cliente';
+// Obtén el nombre del usuario o un valor predeterminado
+$userName = $isAuthenticated && isset($_SESSION['nombre_usuario']) 
+    ? htmlspecialchars($_SESSION['nombre_usuario']) 
+    : "Invitado";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +51,10 @@ $isClient = $isAuthenticated && $_SESSION['tipo_usuario'] === 'cliente';
            <?php if ($isClient): ?>
                 <a href="index.php?c=mostrarDatos">Sus datos</a>
             <?php endif; ?>
-
+            <!-- Saludo al usuario -->
+            <li class="nav-item">
+            <span class="nav-link disabled">Bienvenido, <?= $userName ?>!</span>
+            </li>
             <?php if ($isAuthenticated): ?>
             <a href="index.php?l=logout">Cerrar Sesión</a>
             <?php else: ?>

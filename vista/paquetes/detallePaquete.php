@@ -83,9 +83,17 @@
             <div class="detalle_form_titulo">
                 <h1>RESERVAR PAQUETE</h1>
             </div>
+
+
                 <?php if (isset($_GET['error'])): ?>
                 <p class="error-msg"><?php echo htmlspecialchars($_GET['error'], ENT_QUOTES, 'UTF-8'); ?></p>
                 <?php endif; ?>
+
+                <?php if (isset($_GET['success'])): ?>
+                <p class="success-msg"><?php echo htmlspecialchars($_GET['success'], ENT_QUOTES, 'UTF-8'); ?></p>
+                <?php endif; ?>
+
+
             <form action=""  class="detalle_formulario" onsubmit="return verificarSesion()">
                 <div class="detalle_form_campos">
                    
@@ -106,15 +114,20 @@
             </form>
         </div>
         <script>
-    // Verificar la sesión antes de enviar el formulario
-    function verificarSesion() {
-        const loggedIn = <?php echo json_encode(isset($_SESSION['id_user_client'])); ?>;
-        if (!loggedIn) {
-            alert('Debe iniciar sesión antes de realizar la compra.');
-            return false; // Detener el envío del formulario
-        }
-        return true; // Permitir el envío
-    }
-</script>
+            // Verificar la sesión antes de enviar el formulario
+            function verificarSesion() {
+                const loggedIn = <?php echo json_encode(isset($_SESSION['id_user_client'])); ?>;
+                if (!loggedIn) {
+                    alert('Debe registrarse y iniciar sesión antes de realizar la compra.');
+                    return false; // Detener el envío del formulario
+                }
+                return true; // Permitir el envío
+            }
+             // Mostrar mensaje de éxito si se encuentra el parámetro 'success' en la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('success')) {
+                alert(urlParams.get('success')); // Muestra el mensaje de éxito en un cuadro emergente
+            }
+        </script>
     </article>
 <?php require_once('vista/layout/footer.php'); ?>

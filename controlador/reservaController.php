@@ -23,6 +23,9 @@ class ReservaController{
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
         header("location:".urlsite."index.php?r=mostradetallepaquete");
+        // Redirigir con mensaje de éxito
+        header("location:".urlsite."index.php?r=mostradetallepaquete&success=Compra realizada con éxito.");
+        exit();
 
     }
 }
