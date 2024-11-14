@@ -90,8 +90,6 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
                         foreach ($value as $va ):
                             echo "<tr><td>".$va['id_tipo_servicio']."</td>";
                             echo "<td>".$va['nombre']."</td>";
-                           
-
                             echo "<td><a href='index.php?p=actualizarTipo&id_tipo_servicio=".$va['id_tipo_servicio']."'>ACTUALIZAR</a> 
                             <a href='index.php?p=eliminarTipo&id_tipo_servicio=".$va['id_tipo_servicio']."'>ELIMINAR</a></td>";
                             echo "</tr>";

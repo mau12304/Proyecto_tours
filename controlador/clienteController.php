@@ -19,6 +19,12 @@ class ClienteController{
         $modelCliente->ingresarCliente($nombre, $apellido, $telefono, $correo);
         header("location:".urlsite."index.php?c=mostrarDatos");
     }
+    public static function actualizarCliente(){
+        $id_cliente=$_REQUEST['id_cliente'];
+        $modelCliente = new ClienteModel();
+        $clientes = $modelCliente->obtenerCliente($id_cliente);
+        require_once('vista/userCliente/datosPersonal.php');
+    }
 }
 
 ?>

@@ -44,16 +44,7 @@
                     Ecoturístico Cascadas el Chiflón - Visita al parque nacional Lagos de Montebello.</p>
                 </div>
             </div>
-            <div class="detalle_del_dia">
-                <div class="detalle_dia">
-                <h3>Día-03</h3>
-                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt=""> ZONA ARQUEOLÓGICA DE PALENQUE</h4>
-                <p>Salida a las 05:00 am y regreso aprox. 10:00 pm. 
-                Desayuno en ruta incluida, y comenzamos la vista de 
-                las cascadas de Agua Azul. Se visita la cascada de Misol-Há 
-                y finalmente a la Zona Arqueológica de Palenque.</p>
-                </div>
-            </div>
+           
         </div>
         <div class="detalle_tabla_contenido">
             <div class="detalle_nota">
