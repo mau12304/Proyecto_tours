@@ -144,7 +144,7 @@
     position: relative;
     left: 850px;
     bottom: 1590px;
-    height: 500px;
+    height: 450px;
 }
 
 .detalle_form_titulo{
@@ -185,10 +185,10 @@
 .detalle_formulario input, textarea {
     width: 100%;
     padding: 10px;
+    font-size: 14px;
     border: none;
     border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .detalle_formulario input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
