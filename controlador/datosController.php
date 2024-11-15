@@ -126,8 +126,14 @@ class DatosController{
     }
     public static function eliminarUserCliente(){
         $id_user_client=$_REQUEST['id_user_client'];
-        $modelempleado= new DatosModel();
-        $modelempleado->eliminarUserCliente($id_user_client);
+        $modeluserclient= new DatosModel();
+        $modeluserclient->eliminarUserCliente($id_user_client);
+        header("location:".urlsite."index.php?d=editarDatos");
+    }
+    public static function eliminarCliente(){
+        $id_cliente=$_REQUEST['id_cliente'];
+        $modelcliente= new DatosModel();
+        $modelcliente->eliminarCliente($id_cliente);
         header("location:".urlsite."index.php?d=editarDatos");
     }
 

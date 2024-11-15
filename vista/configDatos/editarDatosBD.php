@@ -69,7 +69,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
                             echo "<td>".$va['telefono']."</td>";
                             echo "<td>".$va['correo']."</td>";
                             echo "<td><a href='index.php?p=actualizar&id=".$va['id_cliente']."'>ACTUALIZAR</a> 
-                            <a href='index.php?p=eliminar&id=".$va['id_cliente']."'>ELIMINAR</a></td>";
+                            <a href='index.php?d=eliminarCliente&id_cliente=".$va['id_cliente']."'>ELIMINAR</a></td>";
                             echo "</tr>";
                         endforeach;
                     ?>      

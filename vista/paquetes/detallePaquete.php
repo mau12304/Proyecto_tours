@@ -114,7 +114,7 @@
                 }
                 return true; // Permitir el envío
             }
-             // Mostrar mensaje de éxito si se encuentra el parámetro 'success' en la URL
+            // Mostrar mensaje de éxito si se encuentra el parámetro 'success' en la URL
             const urlParams = new URLSearchParams(window.location.search);
             if (urlParams.has('success')) {
                 alert(urlParams.get('success')); // Muestra el mensaje de éxito en un cuadro emergente

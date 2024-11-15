@@ -1,8 +1,10 @@
 <?php 
 class ClienteModel{
     private $listaCliente;
+    private $listaClienteReserva;
     public function __construct(){
         $this->listaCliente=array();
+        $this->listaClienteReserva=array();
        
     }
 
@@ -13,7 +15,11 @@ class ClienteModel{
         VALUES ('$nombre', '$apellido', '$telefono', '$correo');";
         $resultado=$cnn->prepare($consulta);
         $resultado->execute();
-        
+        // Obtener el último ID generado
+        $this->$id_cliente = $cnn->lastInsertId();
+
+        // Retornar el ID generado
+        return $this->$id_cliente;
         
         if($resultado){
             return true;
@@ -23,10 +29,10 @@ class ClienteModel{
             
         }
     }
-    public function obtenerCliente($id_cliente){
+    public function obtenerCliente(){
             include_once('conexion.php');
             $cnn=new Conexion();
-            $consulta="select * from Cliente WHERE id_cliente=".$id_cliente.";";
+            $consulta="select * from Cliente WHERE id_cliente=".$this->$id_cliente.";";
             $resultado=$cnn->prepare($consulta);
             $resultado->execute(); 
             while($filas = $resultado->FETCHALL(PDO::FETCH_ASSOC)) {
@@ -34,6 +40,17 @@ class ClienteModel{
             }
             return $this->listaCliente;
     }
+    public function obtenerSusReservaciones($id_user_client){
+        include_once('conexion.php');
+        $cnn=new Conexion();
+        $consulta="select * from Reserva WHERE id_user_client =".$id_user_client.";";
+        $resultado=$cnn->prepare($consulta);
+        $resultado->execute(); 
+        while($filas = $resultado->FETCHALL(PDO::FETCH_ASSOC)) {
+                $this->listaClienteReserva[]=$filas;
+        }
+        return $this->listaClienteReserva;
+}
 }
 
 ?>

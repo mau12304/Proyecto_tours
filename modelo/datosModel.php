@@ -222,8 +222,20 @@ class DatosModel{
     public function eliminarUserCliente($id_user_client){
         include_once('conexion.php');
         $cnn=new Conexion();
-        $consula="DELETE FROM user_client where id_user_client =".$id_user_client;
-        $resultado=$cnn->prepare($consula);
+        $consulta="DELETE FROM user_client where id_user_client =".$id_user_client;
+        $resultado=$cnn->prepare($consulta);
+        $resultado->execute();
+        if($resultado){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function eliminarCliente($id_cliente){
+        include_once('conexion.php');
+        $cnn=new Conexion();
+        $consulta="DELETE FROM Cliente where id_cliente =".$id_cliente;
+        $resultado=$cnn->prepare($consulta);
         $resultado->execute();
         if($resultado){
             return true;
