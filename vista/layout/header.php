@@ -22,7 +22,7 @@ $userName = $isAuthenticated && isset($_SESSION['nombre_usuario'])
     <link rel="stylesheet" href="vista/css/estyleregistro.css">
     <link rel="stylesheet" href="vista/css/styleconocenos.css">
     <link rel="stylesheet" href="Vista/css/style_paquetes.css">
-    <link rel="stylesheet" href="vista/css/styleblog.css">
+    <link rel="stylesheet" href="Vista/css/styleblog.css">
     <link rel="stylesheet" href="vista/css/detallePaquetes.css">
     <link rel="stylesheet" href="vista/css/editarPaquetes.css"><-!Jeshua->
     <link rel="stylesheet" href="vista/css/editarDatosBD.css"><-!Jeshua->
