@@ -1,4 +1,5 @@
 <?php require_once('vista/layout/header.php'); ?>
+<article class="agregar">
 <h1>Registrar Empleado</h1>
 <form action="">
     <label for="nombre">Nombre</label>
@@ -21,4 +22,5 @@
     <input type="hidden" name="d" value="guardarEmpleado">
 
 </form>
+</article>
 <?php require_once('vista/layout/footer.php'); ?>

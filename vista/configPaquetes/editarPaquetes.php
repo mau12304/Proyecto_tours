@@ -6,6 +6,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
     exit();
 }
 ?>
+<article class="paquetes">
 <h1>Lista de paquetes</h1>
 <div>
     <a href="index.php?p=agregarPaquete">Agregar</a>
@@ -125,5 +126,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
             </tbody>
     </table>
 </div>
+</article>
+
 
 <?php require_once('vista/layout/footer.php'); ?>

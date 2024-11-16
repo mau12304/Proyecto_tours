@@ -5,6 +5,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
     exit();
 }
 ?>
+<article class="datos">
 <h1>Lista de Empleados</h1>
 <div>
     <a href="index.php?d=agregarEmpleado">Agregar</a>
@@ -173,4 +174,5 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
             </tbody>
     </table>
 </div>
+</article>
 <?php require_once('vista/layout/footer.php');?>

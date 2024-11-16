@@ -1,4 +1,5 @@
 <?php require_once('vista/layout/header.php'); ?>
+<article class="agregar">
 <h1>Registrar Usuario Cliente</h1>
 <form action="">
     
@@ -12,4 +13,5 @@
     <input type="hidden" name="d" value="guardarUserCliente">
 
 </form>
+</article>
 <?php require_once('vista/layout/footer.php'); ?>

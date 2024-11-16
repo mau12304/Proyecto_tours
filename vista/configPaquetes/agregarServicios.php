@@ -1,4 +1,5 @@
 <?php require_once('vista/layout/header.php'); ?>
+<article class="agregar">
 <h1>Registrar Nuevos Servicio</h1>
 <form action="">
     <label for="id_servicios">id_servicios</label>
@@ -11,4 +12,5 @@
     <input type="hidden" name="p" value="guardarServicios">
 
 </form>
+</article>
 <?php require_once('vista/layout/footer.php'); ?>

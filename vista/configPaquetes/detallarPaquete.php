@@ -1,4 +1,5 @@
 <?php require_once('vista/layout/header.php'); ?>
+<article class="agregar">
 <h1>Registrar detalles del paquete</h1>
 <form action="">
     <label for="id_paquete">id_paquete</label>
@@ -17,4 +18,5 @@
     <input type="hidden" name="p" value="guardarDetalles">
 
 </form>
+</article>
 <?php require_once('vista/layout/footer.php'); ?>

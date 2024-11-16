@@ -12,6 +12,7 @@
 ?>
 <?php require_once('vista/layout/header.php'); ?>
 
+<article class="actualizar" >
 <h1>Actualizar paquete</h1>
 <form action="">
     <label for="id_paquete">id_paquete</label>
@@ -30,5 +31,6 @@
     <input type="hidden" name="p" value="modificarDetalle">
 
 </form>
+</article>
 
 <?php require_once('vista/layout/footer.php'); ?>

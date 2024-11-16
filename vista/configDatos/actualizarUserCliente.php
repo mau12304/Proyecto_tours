@@ -10,6 +10,7 @@
 ?>
 <?php require_once('vista/layout/header.php'); ?>
 
+<article class="actualizar">
 <form action="">
     <label for="id_user_client">id_user_client</label>
     <input type="number" id="id_user_client" name="id_user_client"  readonly value="<?= $id_user_client?>"><br><br>
@@ -23,5 +24,6 @@
     <input type="hidden" name="d" value="modificarUserCliente">
 
 </form>
+</article>
 
 <?php require_once('vista/layout/footer.php'); ?>

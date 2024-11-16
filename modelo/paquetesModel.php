@@ -71,8 +71,8 @@ class PaquetesModel{
     public function agregarDetalles($id_paquete, $id_servicio, $id_tipo_servicio, $hora_salida, $hora_llegada, $cupo_max){
         include_once('conexion.php');
         $cnn=new Conexion();
-        $consulta="INSERT INTO detalle_paquete (id_paquete, id_servicios, id_tipo_servicio, hora_salida, hora_llegada, cupo_max)
-        VALUES ('$id_paquete', '$id_servicio', '$id_tipo_servicio', '$hora_salida', '$hora_llegada', '$cupo_max');";
+        $consulta="INSERT INTO detalle_paquete (id_paquete, id_servicios, id_tipo_servicio, hora_salida, hora_llegada,fecha, cupo_max)
+        VALUES ('$id_paquete', '$id_servicio', '$id_tipo_servicio', '$hora_salida', '$hora_llegada',Now(), '$cupo_max');";
         $resultado=$cnn->prepare($consulta);
         $resultado->execute();
         if($resultado){

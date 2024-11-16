@@ -16,6 +16,7 @@
 ?>
 <?php require_once('vista/layout/header.php'); ?>
 
+<article class="actualizar">
 <form action="">
     <label for="id_empleado">id_empleado</label>
     <input type="number" id="id_empleado" name="id_empleado" value="<?= $id_empleado?>"><br><br>
@@ -39,5 +40,6 @@
     <input type="hidden" name="d" value="modificarEmpleado">
 
 </form>
+</article>
 
 <?php require_once('vista/layout/footer.php'); ?>
