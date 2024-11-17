@@ -20,7 +20,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_two">
                     <div class="vista_titlepac">
-                        <h3><a href=""><b>¡PALENQUE!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetallePalenque"><b>¡PALENQUE!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$9100</p>
@@ -32,7 +32,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_thre">
                     <div class="vista_titlepac">
-                        <h3><a href=""><b>¡SAN CRISTOBAL!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleSancristobal"><b>¡SAN CRISTOBAL!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$9000</p>
@@ -46,7 +46,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_cuatro">
                     <div class="vista_titlepac">
-                        <h3><a href=""><b>¡CASCADAS DE <br> AGUA AZUL!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleAguazul"><b>¡CASCADAS DE <br> AGUA AZUL!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$7000</p>
@@ -58,7 +58,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_cinco">
                     <div class="vista_titlepac">
-                        <h3><a href=""><b>¡COMITAN DE <br>DOMINGUEZ!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleComitan"><b>¡COMITAN DE <br>DOMINGUEZ!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$7850</p>
@@ -70,7 +70,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_seis">
                     <div class="vista_titlepac">
-                        <h3><a href=""><b>¡SIMA DE LAS <br>COTORRAS!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleCotorras"><b>¡SIMA DE LAS <br>COTORRAS!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$7200</p>

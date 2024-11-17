@@ -8,7 +8,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_moderado_uno">
                     <div class="vista_titlepac">
-                        <h3><a href="detalle_paquete.html"><b>¡PARQUE DE LA MARIMBA!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleMarimba"><b>¡PARQUE DE LA MARIMBA!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$1600</p>
@@ -20,7 +20,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_moderado_dos">
                     <div class="vista_titlepac">
-                        <h3><a href=""><b>¡CRISTO DE COPOYA!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleCopoya"><b>¡CRISTO DE COPOYA!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$2900</p>
@@ -32,7 +32,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_moderado_tres">
                     <div class="vista_titlepac">
-                        <h3><a href=""><b>¡SAN CRISTOBAL!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalle"><b>¡SAN CRISTOBAL!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$9000</p>
@@ -46,7 +46,7 @@
             <div class="vista_paquete_moderado">
                 <div class="vista_img_moderado_cuatro">
                     <div class="vista_titlelarge">
-                        <h3><a href=""><b>¡ZOOLOGICO MIGUEL ALVAREZ DEL TORO!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleZoomat"><b>¡ZOOLOGICO MIGUEL ALVAREZ DEL TORO!</b></a></h3>
                     </div>
                     <div class="vista_textlarge_moderado">
                         <p>$1500</p>

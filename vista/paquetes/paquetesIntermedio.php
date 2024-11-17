@@ -9,7 +9,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_intermedio_uno">
                     <div class="vista_titlepac">
-                        <h3><a href="detalle_paquete.html"><b>¡CAÑON DEL SUMIDERO!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleSumidero"><b>¡CAÑON DEL SUMIDERO!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$3500</p>
@@ -21,7 +21,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_intermedio_dos">
                     <div class="vista_titlepac">
-                        <h3><a href=""><b>¡EL ARCOTE!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleArcote"><b>¡EL ARCOTE!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$5000</p>
@@ -33,7 +33,7 @@
             <div class="vista_paquete">
                 <div class="vista_img_intermedio_tres">
                     <div class="vista_titlepac">
-                        <h3><a href=""><b>¡BONAMPAK!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleBonampak"><b>¡BONAMPAK!</b></a></h3>
                     </div>
                     <div class="vista_text">
                         <p>$6200</p>
@@ -47,7 +47,7 @@
             <div class="vista_paquete_intermedio">
                 <div class="vista_img_intermedio_cuatro">
                     <div class="vista_titlelarge">
-                        <h3><a href=""><b>¡CASCADAS EL CHIFLON!</b></a></h3>
+                        <h3><a href="index.php?p=mostrardetalleChiflon"><b>¡CASCADAS EL CHIFLON!</b></a></h3>
                     </div>
                     <div class="vista_textlarge">
                         <p>$4700</p>

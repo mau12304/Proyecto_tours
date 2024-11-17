@@ -17,6 +17,42 @@ class PaquetesController{
     public static function mostradetallepaquete(){
         require_once('vista/paquetes/detallePaquete.php');
     }
+    public static function mostrardetallePalenque(){
+        require_once('vista/paquetes/detallePalenque.php');
+    }
+    public static function mostrardetalleSancristobal(){
+        require_once('vista/paquetes/detalleSancristobal.php');
+    }
+    public static function mostrardetalleAguazul(){
+        require_once('vista/paquetes/detalleAguazul.php');
+    }
+    public static function mostrardetalleComitan(){
+        require_once('vista/paquetes/detalleComitan.php');
+    }
+    public static function mostrardetalleCotorras(){
+        require_once('vista/paquetes/detalleComitan.php');
+    }
+    public static function mostrardetalleSumidero(){
+        require_once('vista/paquetes/detalleSumidero.php');
+    }
+    public static function mostrardetalleArcote(){
+        require_once('vista/paquetes/detalleArcote.php');
+    }
+    public static function mostrardetalleBonampak(){
+        require_once('vista/paquetes/detalleBonampak.php');
+    }
+    public static function mostrardetalleChiflon(){
+        require_once('vista/paquetes/detalleChiflon.php');
+    }
+    public static function mostrardetalleMarimba(){
+        require_once('vista/paquetes/detalleMarimba.php');
+    }
+    public static function mostrardetalleCopoya(){
+        require_once('vista/paquetes/detalleCopoya.php');
+    }
+    public static function mostrardetalleZoomat(){
+        require_once('vista/paquetes/detalleZoomat.php');
+    }
     public static function editarPaquetes(){
         $modelconsultar = new paquetesModel();
         $datos = $modelconsultar->mostrartablaPaquete();
