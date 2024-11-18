@@ -1,0 +1,57 @@
+/* Estilos básicos para la clase .actualizar */
+.actualizar {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilo para las etiquetas dentro de .actualizar */
+.actualizar label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Estilo para los campos de entrada dentro de .actualizar */
+.actualizar input[type="text"],
+.actualizar input[type="number"],
+.actualizar input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Estilo para el botón de submit dentro de .actualizar */
+.actualizar input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.actualizar input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para los saltos de línea (br) dentro de .actualizar */
+.actualizar br {
+    line-height: 1.2;
+}
+
+/* Foco en los campos de entrada dentro de .actualizar */
+.actualizar input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}

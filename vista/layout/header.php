@@ -25,7 +25,7 @@ $userName = $isAuthenticated && isset($_SESSION['nombre_usuario'])
     <link rel="stylesheet" href="Vista/css/styleblog.css">
     <link rel="stylesheet" href="vista/css/detallePaquetes.css">
     <link rel="stylesheet" href="vista/css/editarPaquetes.css"><-!Jeshua->
-    <link rel="stylesheet" href="vista/css/editarDatosBD.css"><-!Jeshua->
+    <link rel="stylesheet" href="Vista/css/editarDatosBD.css"><-!Jeshua->
     <link rel="stylesheet" href="vista/css/actualizar.css"><-!Merida->
     <link rel="stylesheet" href="vista/css/agregar.css"><-!Merida->
     <link rel="stylesheet" href="vista/css/cliente_historial.css"><-!Victor->

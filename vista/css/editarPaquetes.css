@@ -1,0 +1,113 @@
+
+/* Contenedor principal */
+.datos {
+    margin: 2px;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1.tili {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #343a40;
+}
+
+/* Botón Agregar */
+.paquetes a {
+    border: 2px solid #24b4fb;
+    background-color: #24b4fb;
+    border-radius: 0.7em;
+    cursor: pointer;
+    padding: 0.4em 0.8em;
+    transition: all ease-in-out 0.2s;
+    font-size: 14px;
+    display: inline-flex; /* Cambiar a inline-flex para que el ancho se ajuste al contenido */
+    width: auto; /* Asegura que el botón no se extienda */
+    max-width: 200px; /* Limita el ancho máximo */
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.paquetes a {
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 100;
+}
+
+.paquetes a:hover {
+    background-color: #0071e2;
+}
+
+/* Tablas */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: auto; /* Ajusta el ancho de las columnas automáticamente */
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    word-wrap: break-word; /* Ajusta texto largo */
+    max-width: 200px; /* Limita el ancho de las celdas */
+}
+
+.table th {
+    background-color: #343a40;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.table .thead-dark th {
+    background-color: #495057;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+.table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Acciones */
+.table a {
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+    display: inline-block; /* Para alinear bien los botones */
+}
+
+.table a[href*="actualizar"] {
+    background-color: #007bff;
+}
+
+.table a[href*="actualizar"]:hover {
+    background-color: #0056b3;
+}
+
+.table a[href*="eliminar"] {
+    background-color: #dc3545;
+}
+
+.table a[href*="eliminar"]:hover {
+    background-color: #c82333;
+}
+
+/* Hacer la tabla responsiva */
+.table-container {
+    overflow-x: auto; /* Habilita el scroll horizontal en dispositivos pequeños */
+    margin-bottom: 20px;
+}

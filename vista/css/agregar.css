@@ -1,0 +1,66 @@
+/* Contenedor del formulario */
+.agregar {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Título */
+.agregar h1 {
+    font-size: 24px;
+    color: #5a67d8;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Etiquetas de los campos */
+.agregar label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Campos de entrada */
+.agregar input[type="text"], .agregar input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.agregar input[type="text"]:focus, .agregar input[type="number"]:focus {
+    border-color: #5a67d8;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Botón de submit */
+.agregar input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #5a67d8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.agregar input[type="submit"]:hover {
+    background-color: #434190;
+}
+
+/* Campo hidden */
+.agregar input[type="hidden"] {
+    display: none;
+}

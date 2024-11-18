@@ -1,4 +1,4 @@
-<?php require_once('vista/layout/header.php');?>
+<<?php require_once('vista/layout/header.php');?>
 <?php
 if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado') {
     require_once('vista/index.php');
@@ -6,9 +6,9 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
 }
 ?>
 <article class="datos">
-<h1>Lista de Empleados</h1>
-<div>
-    <a href="index.php?d=agregarEmpleado">Agregar</a>
+<h1 class="tili">Lista de Empleados</h1>
+<div class="rar">
+    <a  class="btnagregar" href="index.php?d=agregarEmpleado">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -46,9 +46,9 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
     </table>
 </div>
 <br>
-<h1>Lista de Clientes</h1>
+<h1 class="tili">Lista de Clientes</h1>
 <div>
-    <a href="index.php?p=agregarpaquetes">Agregar</a>
+    <a class="btnagregar" href="index.php?p=agregarpaquetes">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -78,9 +78,9 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
     </table>
 </div>
 <br>
-<h1>Lista de reservas</h1>
+<h1 class="tili">Lista de reservas</h1>
 <div>
-    <a href="index.php?p=agregarpaquetes">Agregar</a>
+    <a class="btnagregar"  href="index.php?p=agregarpaquetes">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -114,9 +114,9 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
     </table>
 </div>
 <br>
-<h1>Lista de Usuarios de empleados</h1>
+<h1 class="tili">Lista de Usuarios de empleados</h1>
 <div>
-    <a href="index.php?d=agregarUserEmpleado">Agregar</a>
+    <a class="btnagregar" href="index.php?d=agregarUserEmpleado">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -144,9 +144,9 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
     </table>
 </div>
 <br>
-<h1>Lista de Usuarios de Clientes</h1>
+<h1 class="tili">Lista de Usuarios de Clientes</h1>
 <div>
-    <a href="index.php?d=agregarUserCliente">Agregar</a>
+    <a class="btnagregar" href="index.php?d=agregarUserCliente">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -175,4 +175,6 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
     </table>
 </div>
 </article>
+
+
 <?php require_once('vista/layout/footer.php');?>
