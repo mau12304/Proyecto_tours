@@ -258,7 +258,7 @@ article {
 
 .pie_explorar {
     position: relative;
-    top: -250px; /* Cambia el valor para moverlo hacia arriba o abajo */
+    top: -260px; /* Cambia el valor para moverlo hacia arriba o abajo */
     left: 1000px;
     line-height: 0.9; /* Espaciado de 1.5 veces el tamaño de la fuente */
     background-color: #3c3a39;
@@ -267,6 +267,7 @@ article {
     padding-bottom: 10px;
     width: 190px;
     height: auto;
+    margin-bottom: 20px;
     border-radius: 15px;
     padding-right: 10px;
 }

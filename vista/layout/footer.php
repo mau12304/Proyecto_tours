@@ -14,8 +14,9 @@
             </div>
            <div class="pie_explorar">
                 <b><h5>Explorar</h5></b>
-                <p>Soporte</p>
+                <p>Telefono: 9614285805</p>
                 <p>Consultar ubicaciones </p>
+                <p>Correo: </p>
            </div>
         </div>
     </footer>
