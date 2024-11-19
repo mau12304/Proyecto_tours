@@ -72,3 +72,14 @@ main {
     margin-bottom: 5px;
 }
 
+.carousel-item img {
+    width: 100%;       /* Ajusta el ancho para que ocupe el espacio completo del carrusel */
+    max-height: 490px; /* Ajusta la altura máxima a lo que desees */     
+    object-fit: contain; /* Mantén las proporciones de la imagen sin recortarla */
+    object-fit: cover;
+    padding-left: 85px;
+    padding-right: 85px;
+    background-color: white;
+    padding-top: 70px;
+    margin-bottom: 50px;
+}

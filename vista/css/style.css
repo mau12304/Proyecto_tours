@@ -202,79 +202,67 @@ article {
     background-color: #010101;
 }
 
-/*Pie de página    rgb(220, 218, 218);*/
-.pie_pagina{
+.pie_pagina {
     background-color: rgb(82, 80, 80);
     width: 100%;
-    height: 250px;
-    content: normal;
-    text-align: justify;
+    height: auto; /* Ajuste dinámico para evitar distorsión */
+    display: flex; /* Usamos Flexbox para distribuir las secciones */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten si el espacio es limitado */
+    justify-content: space-around; /* Espacio uniforme entre las secciones */
+    padding: 20px 0;
+}
 
-}
-.imagenes{
+.imagenes {
     background-color: #3c3a39;
-    padding-bottom: 15px;
+    padding: 15px;
     border-radius: 15px;
-    margin-left: 90px;
-    height: 140px;
-    width: 400px;
-    top: 60px;
-    position: relative;
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    margin-top: 70px;
 }
+
+
 .pie_imagen {
     width: 55px;
-    height: 40px;
-    position: relative;
-    margin-top: 50px;
-    margin-left: 60px;
+    height: 37px;
+    margin: 10px;
     background-color: rgb(171, 177, 175);
     border-radius: 10px;
-}
-.pie_imagen ::after{
-    pointer-events: stroke;
-    color: rgb(234, 240, 240);
-}
-.pie_informacion {
-    margin-left: 150px;
-    position: relative;
-    top: -90px; /* Cambia el valor para moverlo hacia arriba o abajo */
-    line-height: 0.9; /* Espaciado de 1.5 veces el tamaño de la fuente */
-    left: 600px;
-    background-color: #3c3a39;
-    width: 180px;
-    height: auto;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    border-radius: 15px;
-}
-.pie_informacion p{
-    color: rgb(184, 184, 184);
-}
-.pie_informacion h5{
-    color: white;
+    margin-left: 15px;
 }
 
-.pie_explorar {
-    position: relative;
-    top: -260px; /* Cambia el valor para moverlo hacia arriba o abajo */
-    left: 1000px;
-    line-height: 0.9; /* Espaciado de 1.5 veces el tamaño de la fuente */
+.pie_informacion,
+.pie_explorar{
     background-color: #3c3a39;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    width: 190px;
-    height: auto;
-    margin-bottom: 20px;
+    padding: 15px;
     border-radius: 15px;
-    padding-right: 10px;
+    width: 250px; /* Tamaño uniforme para todas las secciones */
+    height: 180px;
+    text-align: left;
+    margin-top: 30px;
+
 }
-.pie_explorar p{
-    color:rgb(184, 184, 184);
+.pie_turismo {
+    height: 250px;
+    width: 350px;
+    margin-right: 20px;
+}
+
+.pie_informacion h5,
+.pie_explorar h5,
+.pie_turismo h5 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.pie_informacion p,
+.pie_explorar p,
+.pie_turismo p {
+    color: rgb(184, 184, 184);
+    margin: 5px 0;
+    line-height: 1.5;
     text-align: justify;
 }
-.pie_explorar h5{
-    color: white;
-}
+
+

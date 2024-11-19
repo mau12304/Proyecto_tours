@@ -1,6 +1,6 @@
 <?php require_once('vista/layout/header.php');?>
 <article>
-        <div id="carouselExampleFade" class="carousel slide carousel-fade" >
+<div id="carouselExampleFade" class="carousel slide carousel-fade" >
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="vista/img/cañon1.png"  alt="firs">
@@ -9,7 +9,7 @@
                 <img src="vista/img/luces.png"  alt="second">
               </div>
               <div class="carousel-item">
-                <img src="vista/img/alg_act.jpg"  alt="second">
+                <img src="vista/img/alg_act.jpg"  alt="three">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -21,7 +21,7 @@
               <span class="visually-hidden">Next</span>
             </button>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        </div><br><br>
+        </div>
         <main><br> 
             <div class="card-blog-container">
                 <!-- Cañón del Sumidero -->
