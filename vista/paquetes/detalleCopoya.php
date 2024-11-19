@@ -17,31 +17,29 @@
 
         </div>
         <div class="detalle_marco">
-            <h1>¡Chiapa de Corzo!</h1>
-            <p><img src="vista/img/detalle_paquetes/calendario.png" alt="">Salida / JUEVES</p>
-            <p><img src="vista/img/detalle_paquetes/sol.png" alt="">9 DIAS</p>
-            <p><img src="vista/img/detalle_paquetes/ubicacion_dos.png" alt="">Visitas / Viena, Budapest, Bratislava, Praga</p>
-            <p><img src="vista/img/detalle_paquetes/reloj-de-bolsillo.png" alt="">Vigencia / 2025-10-02</p>
+            <h1>¡Cristo de Copoya!</h1>
+            <p><img src="vista/img/detalle_paquetes/calendario.png" alt="">Salida / LUNES</p>
+            <p><img src="vista/img/detalle_paquetes/sol.png" alt="">1 DIA 1 NOCHE</p>
+            <p><img src="vista/img/detalle_paquetes/ubicacion_dos.png" alt="">Visitas / Recorrido por el Cristo de Copoya</p>
+            <p><img src="vista/img/detalle_paquetes/reloj-de-bolsillo.png" alt="">Comida / No incluye</p>
         </div>
         <div class="detalle_contenido_detalle">
 
             <div class="detalle_del_dia">
                 <div class="detalle_dia">
                 <h3>Día-01</h3>
-                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">PARQUE NACIONAL CAÑÓN DEL SUMIDERO</h4>
-                <p>Recepción en el aeropuerto de Tuxtla Gutiérrez – 
-                    visita en el parque nacional Cañón del Sumidero – 
-                    visita Chiapa de Corzo – check in en el hotel de San 
-                    Cristóbal de las Casas (se recomienda tomar un vuelo matutino).</p>
+                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">MIRADOR CRISTO DE COPOYA</h4>
+                <p>Hospedaje en el Hotel Las 2 Montañas – 
+                   Se contempla apreciar el gran mirador del cristo de copoya asi como aprsiar las hermosa vista de la ciudad
+                   ademas de atracciones dentro del municipio de copoya, comida, juegos etc.</p>
                 </div>
             </div>
             <div class="detalle_del_dia">
                 <div class="detalle_dia">
-                <h3>Día-02</h3>
-                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">LAGOS DE MONTEBELLO</h4>
-                <p>Salida a las 08:00 am y regreso aprox. 09:00 pm. 
-                    Desayuno en el hotel y comenzamos la visita al centro 
-                    Ecoturístico Cascadas el Chiflón - Visita al parque nacional Lagos de Montebello.</p>
+                <h3>Día-01</h3>
+                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">Copoya</h4>
+                <p>En este bello municio podra sumergirse en las maravillosas costumbres del municipio, una de ellas que no puede saltarse
+                    son los platillos tipicos.</p>
                 </div>
             </div>
            
@@ -53,7 +51,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>SALIDAS: JUEVES</th>
+                        <th>SALIDAS: Lunes</th>
                         <th>DOBLE</th>
                         <th>TRIPLE</th>
                         <th>SENCILLA</th>
@@ -61,10 +59,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Julio 25 / Septiembre 05, 26, 2024</td>
-                        <td>$1,280 PESOS</td>
-                        <td>$1,259 PESOS</td>
-                        <td>$1,840 PESOS</td>
+                        <td>Julio 07 /2025</td>
+                        <td>$5,800 PESOS</td>
+                        <td>$8,700 PESOS</td>
+                        <td>$2,900 PESOS</td>
                     </tr>
                 </tbody>
             </table>
@@ -95,7 +93,7 @@
                 </div>
                 <div class="detalle_form_campos3">
                     <label for="precioPersona">Precio</label>
-                    <input type="number" id="precioPersona" name="precioPersona" value="1250" readonly>
+                    <input type="number" id="precioPersona" name="precioPersona" value="2900" readonly>
                     <label for="Total">Total</label>
                     <input type="text" id="total" name="total" readonly>
                 </div>

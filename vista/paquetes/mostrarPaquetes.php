@@ -13,7 +13,7 @@
                     <div class="vista_text">
                         <p>$8000</p>
                     </div>
-                    <p class="vista_noches">2 DIAS 3 NOCHES</p>
+                    <p class="vista_noches">3 DIAS 2 NOCHES</p>
                     <p class="vista_descripcion">Conoce nuevas Emociones</p>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <div class="vista_text">
                         <p>$9100</p>
                     </div>
-                    <p class="vista_noches">3 DIAS 4 NOCHES</p>
+                    <p class="vista_noches">3 DIAS 2 NOCHES</p>
                     <p class="vista_descripcion">Vive, conoce y disfruta Chiapas</p>
                 </div>
             </div>
@@ -37,7 +37,7 @@
                     <div class="vista_text">
                         <p>$9000</p>
                     </div>
-                    <p class="vista_noches">2 DIAS 3 NOCHES</p>
+                    <p class="vista_noches">3 DIAS 2 NOCHES</p>
                     <p class="vista_descripcion">Es la ciudad más importante de la Región de Los Altos de Chiapas​</p>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <div class="vista_text">
                         <p>$7000</p>
                     </div>
-                    <p class="vista_noches">1 DIA Y 2 NOCHES</p>
+                    <p class="vista_noches">2 DIAS Y 1 NOCHE</p>
                     <p class="vista_descripcion">Vive, conoce y disfruta Chiapas</p>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                     <div class="vista_text">
                         <p>$7850</p>
                     </div>
-                    <p class="vista_noches">2 DIAS 3 NOCHES</p>
+                    <p class="vista_noches">3 DIAS 2 NOCHES</p>
                     <p class="vista_descripcion">Ciudad mexicana situada en el estado de Chiapas, cabecera del municipio homónimo</p>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                     <div class="vista_text">
                         <p>$7200</p>
                     </div>
-                    <p class="vista_noches">1 DIAS 2 NOCHES</p>
+                    <p class="vista_noches">2 DIAS 1 NOCHE</p>
                     <p class="vista_descripcion">Vive, conoce y disfruta Chiapas</p>
                 </div>
             </div>

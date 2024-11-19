@@ -17,31 +17,32 @@
 
         </div>
         <div class="detalle_marco">
-            <h1>¡Chiapa de Corzo!</h1>
-            <p><img src="vista/img/detalle_paquetes/calendario.png" alt="">Salida / JUEVES</p>
-            <p><img src="vista/img/detalle_paquetes/sol.png" alt="">9 DIAS</p>
-            <p><img src="vista/img/detalle_paquetes/ubicacion_dos.png" alt="">Visitas / Viena, Budapest, Bratislava, Praga</p>
-            <p><img src="vista/img/detalle_paquetes/reloj-de-bolsillo.png" alt="">Vigencia / 2025-10-02</p>
+            <h1>¡Palenque!</h1>
+            <p><img src="vista/img/detalle_paquetes/calendario.png" alt="">Salida / MIERCOLES</p>
+            <p><img src="vista/img/detalle_paquetes/sol.png" alt="">3 DIAS 2 NOCHES</p>
+            <p><img src="vista/img/detalle_paquetes/ubicacion_dos.png" alt="">Visitas / Zona Arqueológica, Caminata por la Selva, Recorrido Aluxes</p>
+            <p><img src="vista/img/detalle_paquetes/reloj-de-bolsillo.png" alt="">Vigencia / 2025-09-28</p>
         </div>
         <div class="detalle_contenido_detalle">
 
             <div class="detalle_del_dia">
                 <div class="detalle_dia">
                 <h3>Día-01</h3>
-                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">PARQUE NACIONAL CAÑÓN DEL SUMIDERO</h4>
+                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">ZONA ARQUEOLOGICA DE PALENQUE</h4>
                 <p>Recepción en el aeropuerto de Tuxtla Gutiérrez – 
-                    visita en el parque nacional Cañón del Sumidero – 
-                    visita Chiapa de Corzo – check in en el hotel de San 
-                    Cristóbal de las Casas (se recomienda tomar un vuelo matutino).</p>
+                    alojamiento en el Hotel Cabañas Kin Balam – 
+                    visita a la zona arqueologica de palenque.</p>
                 </div>
             </div>
             <div class="detalle_del_dia">
                 <div class="detalle_dia">
-                <h3>Día-02</h3>
-                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">LAGOS DE MONTEBELLO</h4>
-                <p>Salida a las 08:00 am y regreso aprox. 09:00 pm. 
-                    Desayuno en el hotel y comenzamos la visita al centro 
-                    Ecoturístico Cascadas el Chiflón - Visita al parque nacional Lagos de Montebello.</p>
+                <h3>Día-02-03</h3>
+                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">CAMINATA POR LA SELVA Y RECORRIDO ALUXES</h4>
+                <p>En el dia se inica con un desayuno en el Hotel, posterior a eso se tiene planeado comenzar el recorrido por toda la selva,
+                    teniendo oportunidad de poder acampar y realizar actividades de campo. Para el dia 03 se finalizara con un recorrido por 
+                    Aluxes: Un recorrido el cual tiene la similitud con un Zoológico por lo que se podran ver especies animales endemicas del estado de Chiapas.
+
+                </p>
                 </div>
             </div>
            
@@ -53,7 +54,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>SALIDAS: JUEVES</th>
+                        <th>SALIDAS: MIERCOLES</th>
                         <th>DOBLE</th>
                         <th>TRIPLE</th>
                         <th>SENCILLA</th>
@@ -61,10 +62,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Julio 25 / Septiembre 05, 26, 2024</td>
-                        <td>$1,280 PESOS</td>
-                        <td>$1,259 PESOS</td>
-                        <td>$1,840 PESOS</td>
+                        <td>Agosto 20 / 21, 22, 2025</td>
+                        <td>$18,200 PESOS</td>
+                        <td>$27,300 PESOS</td>
+                        <td>$9,100 PESOS</td>
                     </tr>
                 </tbody>
             </table>
@@ -95,7 +96,7 @@
                 </div>
                 <div class="detalle_form_campos3">
                     <label for="precioPersona">Precio</label>
-                    <input type="number" id="precioPersona" name="precioPersona" value="1250" readonly>
+                    <input type="number" id="precioPersona" name="precioPersona" value="9100" readonly>
                     <label for="Total">Total</label>
                     <input type="text" id="total" name="total" readonly>
                 </div>

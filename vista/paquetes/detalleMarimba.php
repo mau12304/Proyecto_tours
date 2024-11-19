@@ -17,31 +17,27 @@
 
         </div>
         <div class="detalle_marco">
-            <h1>¡Chiapa de Corzo!</h1>
+            <h1>¡Parque de la marimba!</h1>
             <p><img src="vista/img/detalle_paquetes/calendario.png" alt="">Salida / JUEVES</p>
-            <p><img src="vista/img/detalle_paquetes/sol.png" alt="">9 DIAS</p>
-            <p><img src="vista/img/detalle_paquetes/ubicacion_dos.png" alt="">Visitas / Viena, Budapest, Bratislava, Praga</p>
-            <p><img src="vista/img/detalle_paquetes/reloj-de-bolsillo.png" alt="">Vigencia / 2025-10-02</p>
+            <p><img src="vista/img/detalle_paquetes/sol.png" alt="">1 DIA</p>
+            <p><img src="vista/img/detalle_paquetes/ubicacion_dos.png" alt="">Visitas / Parque de la Marimba</p>
+            <p><img src="vista/img/detalle_paquetes/reloj-de-bolsillo.png" alt="">Comida / Buffet</p>
         </div>
         <div class="detalle_contenido_detalle">
 
             <div class="detalle_del_dia">
                 <div class="detalle_dia">
                 <h3>Día-01</h3>
-                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">PARQUE NACIONAL CAÑÓN DEL SUMIDERO</h4>
-                <p>Recepción en el aeropuerto de Tuxtla Gutiérrez – 
-                    visita en el parque nacional Cañón del Sumidero – 
-                    visita Chiapa de Corzo – check in en el hotel de San 
-                    Cristóbal de las Casas (se recomienda tomar un vuelo matutino).</p>
+                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">PARQUE DE LA MARIMBA</h4>
+                <p>Se planea dar un recorrido por el emblematico parque de la marimba, un lugar con musica en vivo(marimba) y baile, ademas
+                    de un rico buffet en el restaurant Chiapas Magico.</p>
                 </div>
             </div>
             <div class="detalle_del_dia">
                 <div class="detalle_dia">
-                <h3>Día-02</h3>
-                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">LAGOS DE MONTEBELLO</h4>
-                <p>Salida a las 08:00 am y regreso aprox. 09:00 pm. 
-                    Desayuno en el hotel y comenzamos la visita al centro 
-                    Ecoturístico Cascadas el Chiflón - Visita al parque nacional Lagos de Montebello.</p>
+                <h3>Día-01</h3>
+                <h4><img src="vista/img/detalle_paquetes/ubicacion.png" alt="">Plazas Comerciales</h4>
+                <p>Para finalizar se llevara a cabo por las plazas comerciales por todo tuxtla en especial Plaza Ambar, la plaza mas lujosa de la ciudad.</p>
                 </div>
             </div>
            
@@ -61,10 +57,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Julio 25 / Septiembre 05, 26, 2024</td>
-                        <td>$1,280 PESOS</td>
-                        <td>$1,259 PESOS</td>
-                        <td>$1,840 PESOS</td>
+                        <td>Junio 12 /2025</td>
+                        <td>$3,200 PESOS</td>
+                        <td>$4,800 PESOS</td>
+                        <td>$1,600 PESOS</td>
                     </tr>
                 </tbody>
             </table>
@@ -95,7 +91,7 @@
                 </div>
                 <div class="detalle_form_campos3">
                     <label for="precioPersona">Precio</label>
-                    <input type="number" id="precioPersona" name="precioPersona" value="1250" readonly>
+                    <input type="number" id="precioPersona" name="precioPersona" value="1600" readonly>
                     <label for="Total">Total</label>
                     <input type="text" id="total" name="total" readonly>
                 </div>

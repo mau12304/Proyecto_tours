@@ -97,6 +97,7 @@
     position: relative;
     top: 140px;
     right: 38px;
+    left: 30px;
     width: 180px;
     height: 80px;
     color: #f7dc6f;
@@ -308,6 +309,7 @@ Paquetes intermedio
     font-weight: bolder;
     font-size: 45px;
     font-family: Arial, Helvetica, sans-serif;
+    padding-left: 383px;
 }
 .vista_textlarge_moderado{
     position: relative;
@@ -317,20 +319,21 @@ Paquetes intermedio
     top: 270px;
     font-weight: bolder;
     font-size: 45px;
+    padding-left: 385px;
 }
 .vista_p{
     position: relative;
     width: 500px;
     height: 100px;
     left: 200px;
-    top: 230px;
+    top: 280px;
 }
 .vista_p_inter{
     position: relative;
     width: 500px;
     height: 100px;
     left: 200px;
-    top: 190px;
+    top: 237px;
 }
 /*
 Paquetes intermedio
@@ -339,6 +342,34 @@ Paquetes intermedio
 /*
 Paquetes Moderado
 */
+.vista_paquete_3 {
+    background-color: rgba(255, 255, 255, 1);
+    width: 280px;
+    height: 485px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    top: 70px;
+    right: 20px;
+    left: 335px;
+    margin-left: 80px;
+    position: relative;
+}
+.vista_paquete_31 {
+    background-color: rgba(255, 255, 255, 1);
+    width: 280px;
+    height: 485px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    top: 70px;
+    right: 20px;
+    left: 375px;
+    margin-left: 80px;
+    position: relative;
+}
 .vista_seccion1_paquetes_mod {
     display: flex;
     align-items: center; /* Alineación vertical */
@@ -376,22 +407,15 @@ Paquetes Moderado
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .vista_img_moderado_tres{
     width: 252px;
     height: 247px;
     background-color: rgb(197, 196, 196);
     position: relative;
     bottom: 105px;
-    /* Imagen */
-    background-image: url(../img/img_paquetes/cristocopoya.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    /* Texto */
-    color: gray;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
+
+} 
 .vista_paquete_moderado{
     background-color: rgba(255, 255, 255, 1);
     width: 999px;

@@ -14,7 +14,7 @@
                     <div class="vista_text">
                         <p>$3500</p>
                     </div>
-                    <p class="vista_noches">2 DIAS 3 NOCHES</p>
+                    <p class="vista_noches">SOLO DISFRUTA</p>
                     <p class="vista_descripcion">Vive, conoce y disfruta Chiapas</p>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                     <div class="vista_text">
                         <p>$5000</p>
                     </div>
-                    <p class="vista_noches">2 DIAS 3 NOCHES</p>
+                    <p class="vista_noches">1 DIA 1 NOCHE</p>
                     <p class="vista_descripcion">Vive, conoce y disfruta Chiapas</p>
                 </div>
             </div>
@@ -52,7 +52,7 @@
                     <div class="vista_textlarge">
                         <p>$4700</p>
                     </div>
-¿                    <p class="vista_p_inter"> 2 DIAS 3 NOCHES <br>Vive, conoce y disfruta Chiapas</p>
+¿                    <p class="vista_p_inter"> 2 DIAS 1 NOCHE <br>Vive, conoce y disfruta Chiapas</p>
                 </div>
             </div>
         </div>
