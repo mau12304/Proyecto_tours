@@ -14,7 +14,9 @@
                 <p>Emprende en una aventura por San Cristobal de las Casas, conoce 
                     sus tradicciones, artesanias y su arquitectura que son una de las cosas que más lo caracteriza.
                 </p>
-                <button class="act_btn_reservar">Reservar</button>
+                <a href="index.php?p=mostrardetalleSancristobal">
+                <button class="act_btn_reservar" >Reservar</button>
+                </a>
             </div>
         </div>
         <div class="act">
@@ -24,7 +26,9 @@
                 <p>Descubre los tesoros de México en una excursión de un dia desde San Cristobal de las Casas. Contempla las Casacadas de
                     Agua Azul, la mística Cascada de Misol Ha en medio de la exuberante selva, y las impresionantes ruinas de la antigua Ciudad Maya de Palenque.
                 </p>
-                <button class="act_btn_reservar">Reservar</button>
+                <a href="index.php?p=mostrardetallePalenque">
+                <button class="act_btn_reservar" >Reservar</button>
+                </a>
             </div>
         </div>
         <div class="act">
@@ -33,7 +37,10 @@
                 <h2>Zinacantán: tour de 1 día a Chamula y Zinacantáne</h2>
                 <p>Conoce el día a día y las tradiciones de las comunidades indígenas 
                     de San Juan Chamula y Zinacantán en un tour de un día desde San Cristóbal de las Casas.</p>
-                <button class="act_btn_reservar">Reservar</button>
+                    <a href="index.php?p=mostrardetallePalenque">
+                    <button class="act_btn_reservar">Reservar</button>
+
+                    </a>
             </div>
         </div>
         <div class="act">
@@ -43,7 +50,9 @@
                 <p>Embárcate en un viaje cautivador desde San Cristóbal de Las Casas hasta 
                     el Cañón del Sumidero. Descubre algunos de sus majestuosos miradores, y 
                     sumérgete en el pintoresco encanto del pueblo de Chiapa de Corzo.</p>
-                <button class="act_btn_reservar">Reservar</button>
+                    <a href="index.php?p=mostrardetalleSumidero">
+                    <button class="act_btn_reservar">Reservar</button>
+                    </a>
             </div>
         </div>
 </article>
