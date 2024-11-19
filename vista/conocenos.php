@@ -1,10 +1,10 @@
 <?php require_once("layout/header.php");?>
-        <div class="conocenos_title">
+        <!--<div class="conocenos_title">
             <div class="conocenos_title2">
                 <h1>Somos la compañía líder en distribución online de actividades, excursiones y visitas guiadas en español en los 
                     principales destinos turísticos de Chiapas.</h1>
             </div>
-        </div>
+        </div>-->
         <div class="conocenos_container">
             <h1>Nuestros valores</h1>
             <div class="conocenos_value">
