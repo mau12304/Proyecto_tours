@@ -9,7 +9,7 @@
     width: 100%;
     height: 600px;
     color: rgb(255, 255, 255);
-    background-image: url(..//img/conocenos/conocenos.jpg);
+    background-image: url(../img/conocenos/conocenos.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; 
