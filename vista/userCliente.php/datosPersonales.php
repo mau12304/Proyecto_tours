@@ -11,7 +11,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'cliente'
                 <p class="success-msg"><?php echo htmlspecialchars($_GET['enviado'], ENT_QUOTES, 'UTF-8'); ?></p>
                 <?php endif; ?>
 <article class="cliente">
-<h1>Formulario con Actualización</h1>
+<h1>Ingrese sus datos</h1>
 
 <!-- Formulario con datos cargados -->
 <form  class="detalle_formulario">
