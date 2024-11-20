@@ -39,7 +39,6 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'cliente'
 <br>
 <h1>Lista de reservas</h1>
 <div>
-    <a href="index.php?p=agregarpaquetes">Agregar</a>
     <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -50,7 +49,6 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'cliente'
                 <th scope="col">id_paquete</th>
                 <th scope="col">comentarios</th>
                 <th scope="col">id_user_client</th>
-                <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -64,9 +62,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'cliente'
                             echo "<td>".$va['id_paquete']."</td>";
                             echo "<td>".$va['comentarios']."</td>";
                             echo "<td>".$va['id_user_client']."</td>";
-                            echo "<td><a href='index.php?p=actualizar&id=".$va['id_reserva']."'>ACTUALIZAR</a> 
-                            <a href='index.php?p=eliminar&id=".$va['id_reserva']."'>ELIMINAR</a></td>";
-                            echo "</tr>";
+                           
                         endforeach;
                     ?>      
             </tbody>
