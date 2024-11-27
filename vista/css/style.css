@@ -44,10 +44,6 @@ nav ul {
     justify-content: right;
 }
 
-nav li {
-    margin: 0 20px;
-    position: relative;
-}
 
 nav a {
     text-decoration: none;
