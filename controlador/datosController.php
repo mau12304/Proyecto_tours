@@ -26,6 +26,9 @@ class DatosController{
     public static function agregarUserCliente(){
         require('vista/configDatos/agregarUserCliente.php');
     }
+    public static function agregarReserva(){
+        require('vista/configDatos/agregarReserva.php');
+    }
 
     public static function guardarEmpleado(){
         $id_empleado=$_REQUEST['id_empleado'];
@@ -57,6 +60,18 @@ class DatosController{
         $correo=$_REQUEST['correo'];
         $modelDatos = new DatosModel();
         $modelDatos->agregarUserCliente($username, $password, $correo);
+        header("location:".urlsite."index.php?d=editarDatos");
+    }
+    public static function guardarReserva(){
+        // $id_reserva=$_REQUEST['id_reserva'];
+        $fecha=$_REQUEST['fecha'];
+        $pasajeros=$_REQUEST['pasajeros'];
+        $precio=$_REQUEST['precio'];
+        $id_paquete=$_REQUEST['id_paquete'];
+        $comentarios=$_REQUEST['comentarios'];
+        $id_user_cliente=$_REQUEST['id_user_client'];
+        $modelDatos = new DatosModel();
+        $modelDatos->agregarReserva($fecha, $pasajeros, $precio, $id_paquete, $comentarios, $id_user_cliente);
         header("location:".urlsite."index.php?d=editarDatos");
     }
     public static function actualizarEmpleado(){
@@ -136,7 +151,12 @@ class DatosController{
         $modelcliente->eliminarCliente($id_cliente);
         header("location:".urlsite."index.php?d=editarDatos");
     }
-
+    public static function eliminarReserva(){
+        $id_reserva = $_REQUEST['id_reserva'];
+        $modelreserva = new DatosModel();
+        $modelreserva->eliminarReserva($id_reserva);
+        header("location:".urlsite."index.php?d=editarDatos");
+    }
 
 
 }

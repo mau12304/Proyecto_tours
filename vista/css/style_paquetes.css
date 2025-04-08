@@ -12,7 +12,7 @@
     left: 950px;
     padding-left: 10px;
     border-radius: 10px;
-    background-color: rgb(245, 245, 245, 1);
+    background-color: rgb(228, 189, 189);
     max-height: 40px;
     text-align: center;
     padding-top: 10px;
@@ -22,11 +22,11 @@
 }
 .vista_sctg_paquete{
     text-decoration: none;
-    color: rgba(117, 117, 117, 1);
+    color: rgb(10, 10, 10);
     font-size: 17px;
 }
 .vista_sctg_paquete :hover{
-    border-bottom: 3px solid rgb(129, 129, 136);
+    border-bottom: 3px solid rgb(160, 164, 220);
 }
 .vista_seccion1_paquetes{
     display: flex;

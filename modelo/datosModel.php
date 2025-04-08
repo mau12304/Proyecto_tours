@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+use LDAP\Result;
+
 class DatosModel{
     private $listaEmpleado;
     private $listaCliente;
@@ -104,6 +107,19 @@ class DatosModel{
         $cnn=new Conexion();
         $consulta="INSERT INTO user_client (username, password, correo)
         VALUES ('$username', '$password' , '$correo');";
+        $resultado=$cnn->prepare($consulta);
+        $resultado->execute();
+        if($resultado){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function agregarReserva($fecha, $pasajeros, $precio, $id_paquete, $comentarios, $id_user_client){
+        include('conexion.php');
+        $cnn=new Conexion();
+        $consulta="INSERT INTO Reserva (fecha, pasajeros, precio, id_paquete, comentarios, id_user_client)
+        VALUES (STR_TO_DATE('$fecha', '%Y-%m-%d'), '$pasajeros', '$precio', '$id_paquete', '$comentarios','$id_user_client');";
         $resultado=$cnn->prepare($consulta);
         $resultado->execute();
         if($resultado){
@@ -235,6 +251,18 @@ class DatosModel{
         include_once('conexion.php');
         $cnn=new Conexion();
         $consulta="DELETE FROM Cliente where id_cliente =".$id_cliente;
+        $resultado=$cnn->prepare($consulta);
+        $resultado->execute();
+        if($resultado){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public function eliminarReserva($id_reserva){
+        include_once('conexion.php');
+        $cnn=new Conexion();
+        $consulta="DELETE FROM Reserva where id_reserva =".$id_reserva;
         $resultado=$cnn->prepare($consulta);
         $resultado->execute();
         if($resultado){
