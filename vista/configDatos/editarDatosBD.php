@@ -107,7 +107,7 @@ if (!isset($_SESSION['tipo_usuario']) || $_SESSION['tipo_usuario'] !== 'empleado
                             echo "<td>".$va['id_paquete']."</td>";
                             echo "<td>".$va['comentarios']."</td>";
                             echo "<td>".$va['id_user_client']."</td>";
-                            echo "<td><a href='index.php?p=actualizar&id=".$va['id_reserva']."'>ACTUALIZAR</a> 
+                            echo "<td><a href='index.php?d=actualizarReserva&id_reserva=".$va['id_reserva']."'>ACTUALIZAR</a> 
                             <a href='index.php?d=eliminarReserva&id_reserva=".$va['id_reserva']."'>ELIMINAR</a></td>";
                             echo "</tr>";
                         endforeach;

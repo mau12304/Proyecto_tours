@@ -161,6 +161,17 @@ class DatosModel{
         }
         return $this->listaUserClient;
     }
+    public function obtenerReserva($id_reserva){
+        include_once('conexion.php');
+        $cnn=new Conexion();
+        $consulta="select * from Reserva WHERE id_reserva=".$id_reserva.";";
+        $resultado=$cnn->prepare($consulta);
+        $resultado->execute(); 
+        while($filas = $resultado->FETCHALL(PDO::FETCH_ASSOC)) {
+                $this->listaReserva[]=$filas;
+        }
+        return $this->listaReserva;
+    }
     public function actualizarUserEmpleado($id_user_empleado, $username,$password, $id_empleado) {
         include_once('conexion.php');
         $cnn = new Conexion();
@@ -203,6 +214,23 @@ class DatosModel{
                     "', telefono = '" . $telefono . 
                     "', correo = '" . $correo . 
                     "' WHERE id_empleado = '" . $id_empleado . "'";
+            $resultado = $cnn->prepare($consulta);
+            $resultado->execute();
+            if ($resultado) {
+                return true;
+            } else {
+                return false;
+            }
+    }
+    public function actualizarReserva($id_reserva, $fecha, $pasajeros, $precio, $id_paquete, $comentarios) {
+        include_once('conexion.php');
+        $cnn = new Conexion();
+        $consulta = "UPDATE Reserva SET fecha = '" . $fecha . 
+                    "', pasajeros = '" . $pasajeros . 
+                    "', precio = '" . $precio . 
+                    "', id_paquete = '" . $id_paquete . 
+                    "', comentarios = '" . $comentarios . 
+                    "' WHERE id_reserva = '" . $id_reserva . "'";
             $resultado = $cnn->prepare($consulta);
             $resultado->execute();
             if ($resultado) {

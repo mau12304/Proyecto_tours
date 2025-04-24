@@ -6,10 +6,12 @@
             const precioPersona = document.getElementById("precioPersona").value;
             
             // Calcular el total
+            const Subtotal = ((numPasajeros * precioPersona) * 50) / 100;
             const total = numPasajeros * precioPersona;
             
             // Mostrar el total en el campo correspondiente
-            document.getElementById("total").value = total;
+            document.getElementById("Subtotal").value = "$" + Subtotal;
+            document.getElementById("total").value =  "$" + total ;
         }
 </script>
     <article class="detalle_paquetes">
@@ -83,23 +85,22 @@
                 <?php endif; ?>
 
 
-            <form action=""  class="detalle_formulario" onsubmit="return verificarSesion()">
-                <div class="detalle_form_campos">
-                   
-                </div>
+            <form action="index.php?r=reservarComitan" method="POST" class="detalle_formulario" onsubmit="return verificarSesion()">
                 <div class="detalle_form_campos" >
-                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>
-                    <input type="number" name="personas" id="personas" placeholder="No.Personas" required min="1" oninput="calcularTotal()" required>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required pattern="[0-9]{10}">
+                    <input type="number" name="personas" id="personas" placeholder="No.Personas" required min="1" oninput="calcularTotal()">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+
                 </div>
                 <div class="detalle_form_campos3">
-                    <label for="precioPersona">Precio</label>
-                    <input type="number" id="precioPersona" name="precioPersona" value="7850" readonly>
-                    <label for="Total">Total</label>
-                    <input type="text" id="total" name="total" readonly>
+                    <span>Precio por persona</span>
+                    <input type="number" id="precioPersona" name="precioPersona" value="7000" readonly>
+                    <input type="text" id="Subtotal" name="Subtotal" placeholder="Subtotal" readonly>
                 </div>
-                <textarea name="comentarios" id="comentarios" placeholder="Comentarios"></textarea>
-                <input type="submit" value="Comprar">
-                <input type="hidden" name="r" value="reservarComitan">
+                    <input type="text" name="total" id="total" placeholder="Total" readonly>
+                    <input type="email" name="correo" id="correo" placeholder="Correo" required>
+                    <textarea name="comentarios" id="comentarios" placeholder="Comentarios"></textarea>
+                    <button type="submit" class="ini">Reservar</button>
             </form>
         </div>
         <script>

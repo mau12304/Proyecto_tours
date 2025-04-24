@@ -94,6 +94,12 @@ class DatosController{
         $usercliente=$modelcliente->obtenerUserCliente($id_user_client);
         require_once('vista/configDatos/actualizarUserCliente.php');
     }
+    public static function actualizarReserva(){
+        $id_reserva=$_REQUEST['id_reserva'];
+        $modelreserva = new DatosModel();
+        $reserva=$modelreserva->obtenerReserva($id_reserva);
+        require_once('vista/configDatos/actualizarReserva.php');
+    }
     public static function modificarUserEmpleado(){
         $id_user_empleado=$_REQUEST['id_user_empleado'];
         $username=$_REQUEST['username'];
@@ -125,6 +131,17 @@ class DatosController{
         $correo=$_REQUEST['correo'];
         $modelDatos = new DatosModel();
         $modelDatos->actualizarEmpleado($id_empleado, $nombre, $apellido, $puesto, $fecha_nacimiento, $curp, $genero, $telefono, $correo);
+        header("location:".urlsite."index.php?d=editarDatos");
+    }
+    public static function modificarReserva(){
+        $id_reserva=$_REQUEST['id_reserva'];
+        $fecha=$_REQUEST['fecha'];
+        $pasajeros=$_REQUEST['pasajeros'];
+        $precio=$_REQUEST['precio'];
+        $id_paquete=$_REQUEST['id_paquete'];
+        $comentarios=$_REQUEST['comentarios'];
+        $modelDatos = new DatosModel();
+        $modelDatos->actualizarReserva($id_reserva, $fecha, $pasajeros, $precio, $id_paquete, $comentarios);
         header("location:".urlsite."index.php?d=editarDatos");
     }
     public static function eliminarEmpleado(){

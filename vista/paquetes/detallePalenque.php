@@ -6,23 +6,26 @@
             const precioPersona = document.getElementById("precioPersona").value;
             
             // Calcular el total
+            const Subtotal = ((numPasajeros * precioPersona) * 50) / 100;
             const total = numPasajeros * precioPersona;
             
             // Mostrar el total en el campo correspondiente
-            document.getElementById("total").value = total;
+            document.getElementById("Subtotal").value = "$" + Subtotal;
+            document.getElementById("total").value =  "$" + total ;
         }
 </script>
     <article class="detalle_paquetes">
-        <div class="detalle_borde">
+            <div class="detalle_bloque">
+            <div class="detalle_borde"></div>
+            <div class="detalle_marco">
+                <h1>¡Paleque!</h1>
+                <p>🕑 Salida / LUNES</p>
+                <p>🌞 3 DÍAS 2 NOCHES</p>
+                <p>🌿 Visitas / Río Grijalva, Tours de Naturaleza, Vida Silvestre</p>
+                <p>📅 Vigencia / 2025-09-28</p>
+            </div>
+            </div>
 
-        </div>
-        <div class="detalle_marco">
-            <h1>¡Palenque!</h1>
-            <p><img src="vista/img/detalle_paquetes/calendario.png" alt="">Salida / MIERCOLES</p>
-            <p><img src="vista/img/detalle_paquetes/sol.png" alt="">3 DIAS 2 NOCHES</p>
-            <p><img src="vista/img/detalle_paquetes/ubicacion_dos.png" alt="">Visitas / Zona Arqueológica, Caminata por la Selva, Recorrido Aluxes</p>
-            <p><img src="vista/img/detalle_paquetes/reloj-de-bolsillo.png" alt="">Vigencia / 2025-09-28</p>
-        </div>
         <div class="detalle_contenido_detalle">
 
             <div class="detalle_del_dia">
@@ -86,31 +89,34 @@
                 <?php endif; ?>
 
 
-            <form action=""  class="detalle_formulario" onsubmit="return verificarSesion()">
-                <div class="detalle_form_campos">
-                   
-                </div>
+            <form action="index.php?r=reservarPalenque" method="POST" class="detalle_formulario" onsubmit="return verificarSesion()">
                 <div class="detalle_form_campos" >
-                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>
-                    <input type="number" name="personas" id="personas" placeholder="No.Personas" required min="1" oninput="calcularTotal()" required>
+                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required pattern="[0-9]{10}">
+                    <input type="number" name="personas" id="personas" placeholder="No.Personas" required min="1" oninput="calcularTotal()">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+
                 </div>
                 <div class="detalle_form_campos3">
-                    <label for="precioPersona">Precio</label>
+                    <span>Precio por persona</span>
                     <input type="number" id="precioPersona" name="precioPersona" value="9100" readonly>
-                    <label for="Total">Total</label>
-                    <input type="text" id="total" name="total" readonly>
+                    <input type="text" id="Subtotal" name="Subtotal" placeholder="Subtotal" readonly>
                 </div>
-                <textarea name="comentarios" id="comentarios" placeholder="Comentarios"></textarea>
-                <input type="submit" value="Comprar">
-                <input type="hidden" name="r" value="reservarPalenque">
+                    <input type="text" name="total" id="total" placeholder="Total" readonly>
+                    <input type="email" name="correo" id="correo" placeholder="Correo" required>
+                    <textarea name="comentarios" id="comentarios" placeholder="Comentarios"></textarea>
+                    <button type="submit" class="ini">Reservar</button>
+            
             </form>
         </div>
+        
+        
+
         <script>
             // Verificar la sesión antes de enviar el formulario
             function verificarSesion() {
                 const loggedIn = <?php echo json_encode(isset($_SESSION['id_user_client'])); ?>;
                 if (!loggedIn) {
-                    alert('Debe registrarse y iniciar sesión antes de realizar la compra.');
+                    alert('Debe registrarse y iniciar sesión antes de realizar la Reserva.');
                     return false; // Detener el envío del formulario
                 }
                 return true; // Permitir el envío

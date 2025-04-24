@@ -1,16 +1,18 @@
 <?php require_once('vista/layout/header.php'); ?>
 <script>
-    function calcularTotal() {
-        // Obtener el número de pasajeros y el precio por persona
-        const numPasajeros = document.getElementById("personas").value;
-        const precioPersona = document.getElementById("precioPersona").value;
-
-        // Calcular el total
-        const total = numPasajeros * precioPersona;
-
-        // Mostrar el total en el campo correspondiente
-        document.getElementById("total").value = total;
-    }
+        function calcularTotal() {
+            // Obtener el número de pasajeros y el precio por persona
+            const numPasajeros = document.getElementById("personas").value;
+            const precioPersona = document.getElementById("precioPersona").value;
+            
+            // Calcular el total
+            const Subtotal = ((numPasajeros * precioPersona) * 50) / 100;
+            const total = numPasajeros * precioPersona;
+            
+            // Mostrar el total en el campo correspondiente
+            document.getElementById("Subtotal").value = "$" + Subtotal;
+            document.getElementById("total").value =  "$" + total ;
+        }
 </script>
 <article class="detalle_paquetes">
     <div class="detalle_borde">
@@ -81,23 +83,22 @@
         <?php endif; ?>
 
 
-        <form action="" class="detalle_formulario" onsubmit="return verificarSesion()">
-            <div class="detalle_form_campos">
+        <form action="index.php?r=reservarSumidero" method="POST" class="detalle_formulario" onsubmit="return verificarSesion()">
+                <div class="detalle_form_campos" >
+                    <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required pattern="[0-9]{10}">
+                    <input type="number" name="personas" id="personas" placeholder="No.Personas" required min="1" oninput="calcularTotal()">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
 
-            </div>
-            <div class="detalle_form_campos">
-                <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required>
-                <input type="number" name="personas" id="personas" placeholder="No.Personas" required min="1" oninput="calcularTotal()" required>
-            </div>
-            <div class="detalle_form_campos3">
-                <label for="precioPersona">Precio</label>
-                <input type="number" id="precioPersona" name="precioPersona" value="3500" readonly>
-                <label for="Total">Total</label>
-                <input type="text" id="total" name="total" readonly>
-            </div>
-            <textarea name="comentarios" id="comentarios" placeholder="Comentarios"></textarea>
-            <input type="submit" value="Comprar">
-            <input type="hidden" name="r" value="reservarSumidero">
+                </div>
+                <div class="detalle_form_campos3">
+                    <span>Precio por persona</span>
+                    <input type="number" id="precioPersona" name="precioPersona" value="3500" readonly>
+                    <input type="text" id="Subtotal" name="Subtotal" placeholder="Subtotal" readonly>
+                </div>
+                    <input type="text" name="total" id="total" placeholder="Total" readonly>
+                    <input type="email" name="correo" id="correo" placeholder="Correo" required>
+                    <textarea name="comentarios" id="comentarios" placeholder="Comentarios"></textarea>
+                    <button type="submit" class="ini">Reservar</button>
         </form>
     </div>
     <script>

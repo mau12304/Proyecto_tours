@@ -7,7 +7,7 @@ $isClient = $isAuthenticated && $_SESSION['tipo_usuario'] === 'cliente';
 // Obtén el nombre del usuario o un valor predeterminado
 $userName = $isAuthenticated && isset($_SESSION['nombre_usuario']) 
     ? htmlspecialchars($_SESSION['nombre_usuario']) 
-    : "Inicia Sesion";
+    : "";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,9 @@ $userName = $isAuthenticated && isset($_SESSION['nombre_usuario'])
     <link rel="stylesheet" href="vista/css/styleconocenos.css">
     <link rel="stylesheet" href="Vista/css/style_paquetes.css">
     <link rel="stylesheet" href="vista/css/style_blog.css">
+
     <link rel="stylesheet" href="vista/css/detallePaquetes.css">
+
     <link rel="stylesheet" href="vista/css/editarPaquetes.css">
     <link rel="stylesheet" href="vista/css/editarDatosBD.css">
     <link rel="stylesheet" href="vista/css/actualizar.css">

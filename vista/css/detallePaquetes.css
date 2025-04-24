@@ -141,22 +141,23 @@
 /*Formulario*/
 .detalle_form_contenido {
     background-color: rgb(193, 199, 199);
-    width: 470px;
+    width: 450px;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 0px;
     color: white;
     text-align: center;
     position: relative;
     left: 850px;
     margin-top: 50px;
     bottom: 1490px;
-    height: 450px;
+    height: 550px;
 }
 
 .detalle_form_titulo{
-    background-color: #767fa8;
+    background-color: #46a293;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 2px;
+    color: rgb(255, 255, 255);
 }
 .detalle_form_titulo h1{
     font-size: 25px;
@@ -177,6 +178,8 @@
     display: flex;
     gap: 10px;
     margin-bottom: 30px;
+    font-size: 12px;
+    color: black;
 
 }
 .detalle_form_campos3 input{
@@ -191,6 +194,7 @@
 .detalle_formulario input, textarea {
     width: 100%;
     padding: 10px;
+    margin-bottom: 10px;
     font-size: 14px;
     border: none;
     border-radius: 5px;
