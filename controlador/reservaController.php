@@ -52,38 +52,23 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
-        $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
-        $pasajeros=$_REQUEST['personas'];
-        $precio=$_REQUEST['total'];
-        $comentarios=$_REQUEST['comentarios'];
-        $id_paquete=1;
-        $modelReserva = new ReservaModel();
-        $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallepaquete&success=Compra realizada con éxito.");
-        exit();
-
-    }
-    public static function reservarPalenque(){
-        // Verificar si el cliente está en sesión
-        if (!isset($_SESSION['id_user_client'])) {
-            throw new Exception("No se ha iniciado sesión como cliente.");
-        }
+        // Obtener los datos del formulario
         $numero_personas=$_REQUEST['personas'];
         $nombre=$_REQUEST['nombre'];
         $precio_persona=$_REQUEST['precioPersona'];
         $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
         $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
         //enviar correo
         $to = $correo;
-        $subject = "Reserva de Paquete - Palenque";
+        $subject = "Reserva de Paquete - Chiapas de Corzo";
         $message = "Hola $nombre,\n\n
         Gracias por reservar el paquete Palenque con nosotros.\n\n
         Detalles de la reserva\n
         Número de personas: $numero_personas\n
         Precio por persona: $precio_persona\n
-        Total de tu reserva - 50%: $subtotal\n 
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
         El otro 50% se paga fisicamente: \n
         ¡Esperamos que disfrutes de tu experiencia!\n\n
         Saludos del El equipo de reservas.";
@@ -92,8 +77,62 @@ class ReservaController{
         if (mail($to, $subject, $message, $headers)) {
             $mensaje_exito = "Correo enviado con éxito.";
         } else {
-            $mensaje_exito = "Error al enviar el correo.";
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }        
+        
+        $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
+        $pasajeros=$_REQUEST['personas'];
+        $precio=$_REQUEST['total'];
+        $comentarios=$_REQUEST['comentarios'];
+        $id_paquete=1;
+        $modelReserva = new ReservaModel();
+        $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
+        exit();
+
+    }
+    public static function reservarPalenque(){
+        // Verificar si el cliente está en sesión
+        if (!isset($_SESSION['id_user_client'])) {
+            throw new Exception("No se ha iniciado sesión como cliente.");
         }
+
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Palenque";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
+
         // Guardar la reserva en la base de datos
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
         $pasajeros=$_REQUEST['personas'];
@@ -103,7 +142,14 @@ class ReservaController{
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
         // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallepalenque&success= $mensaje_exito.");
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
         exit();
 
     }
@@ -113,18 +159,52 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - San Cristobal";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
+
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=3;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallesancristobal&success=Compra realizada con éxito.");
-        exit();
 
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
+        exit();
     }
     public static function reservarAguazul(){
 
@@ -132,18 +212,50 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Aguazul";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=4;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetalleguazul&success=Compra realizada con éxito.");
-        exit();
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
 
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
+        exit();
     }
     public static function reservarComitan(){
 
@@ -151,16 +263,49 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Comitan";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=5;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallecomitan&success=Compra realizada con éxito.");
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
         exit();
 
     }
@@ -170,16 +315,50 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Cotorras";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=6;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallecotorras&success=Compra realizada con éxito.");
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
         exit();
 
     }
@@ -189,18 +368,51 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Cañon del Sumidero";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=7;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallesumidero&success=Compra realizada con éxito.");
-        exit();
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
 
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
+        exit();
     }
     public static function reservarArcote(){
 
@@ -208,16 +420,50 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Arcote";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=8;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallearcote&success=Compra realizada con éxito.");
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
         exit();
 
     }
@@ -227,16 +473,49 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Bonampak";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=9;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallebonampak&success=Compra realizada con éxito.");
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
         exit();
 
     }
@@ -246,16 +525,49 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Casda del Chiflon";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=10;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallechiflon&success=Compra realizada con éxito.");
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
         exit();
 
     }
@@ -265,16 +577,50 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Parque de la Marimba";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=11;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallemarimba&success=Compra realizada con éxito.");
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
         exit();
 
     }
@@ -284,16 +630,49 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Copoya";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=12;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallecopoya&success=Compra realizada con éxito.");
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
         exit();
 
     }
@@ -303,16 +682,50 @@ class ReservaController{
         if (!isset($_SESSION['id_user_client'])) {
             throw new Exception("No se ha iniciado sesión como cliente.");
         }
+        $numero_personas=$_REQUEST['personas'];
+        $nombre=$_REQUEST['nombre'];
+        $precio_persona=$_REQUEST['precioPersona'];
+        $subtotal = $_REQUEST['Subtotal']; // Calcular el 50% del total
+        $correo=$_REQUEST['correo'];
+        $monto_total = $_REQUEST['total'];
+
+        //enviar correo
+        $to = $correo;
+        $subject = "Reserva de Paquete - Zoomat";
+        $message = "Hola $nombre,\n\n
+        Gracias por reservar el paquete Palenque con nosotros.\n\n
+        Detalles de la reserva\n
+        Número de personas: $numero_personas\n
+        Precio por persona: $precio_persona\n
+        Total de tu reserva $monto_total - 50%: $subtotal\n 
+        El otro 50% se paga fisicamente: \n
+        ¡Esperamos que disfrutes de tu experiencia!\n\n
+        Saludos del El equipo de reservas.";
+        $headers = "From: segio@gmail.com\r\n" .
+                   'Reply-To: turituxOpe@gmail.com';
+        if (mail($to, $subject, $message, $headers)) {
+            $mensaje_exito = "Correo enviado con éxito.";
+        } else {
+            $mensaje_exito = "Error al enviar el cor reo.";
+        }
+
+
         $id_user_client = $_SESSION['id_user_client']; // Obtener el ID del cliente de la sesión
-       
         $pasajeros=$_REQUEST['personas'];
         $precio=$_REQUEST['total'];
         $comentarios=$_REQUEST['comentarios'];
         $id_paquete=13;
         $modelReserva = new ReservaModel();
         $modelReserva->guardarReserva($pasajeros, $precio, $id_paquete, $comentarios, $id_user_client);
-        // Redirigir con mensaje de éxito
-        header("location:".urlsite."index.php?r=mostradetallezoomat&success=Compra realizada con éxito.");
+        
+        $_SESSION['checkout_data'] = [
+            'personas' => $_REQUEST['personas'],
+            'precio_persona' => $_REQUEST['precioPersona'],
+
+            
+        ];
+        
+        header("location:".urlsite."index.php?a=checkout");
         exit();
 
     }

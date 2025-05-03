@@ -18,7 +18,7 @@
             <div class="detalle_bloque">
             <div class="detalle_borde"></div>
             <div class="detalle_marco">
-                <h1>¡Paleque!</h1>
+                <h1>¡Palenque!</h1>
                 <p>🕑 Salida / LUNES</p>
                 <p>🌞 3 DÍAS 2 NOCHES</p>
                 <p>🌿 Visitas / Río Grijalva, Tours de Naturaleza, Vida Silvestre</p>
@@ -78,17 +78,6 @@
             <div class="detalle_form_titulo">
                 <h1>RESERVAR PAQUETE</h1>
             </div>
-
-
-                <?php if (isset($_GET['error'])): ?>
-                <p class="error-msg"><?php echo htmlspecialchars($_GET['error'], ENT_QUOTES, 'UTF-8'); ?></p>
-                <?php endif; ?>
-
-                <?php if (isset($_GET['success'])): ?>
-                <p class="success-msg"><?php echo htmlspecialchars($_GET['success'], ENT_QUOTES, 'UTF-8'); ?></p>
-                <?php endif; ?>
-
-
             <form action="index.php?r=reservarPalenque" method="POST" class="detalle_formulario" onsubmit="return verificarSesion()">
                 <div class="detalle_form_campos" >
                     <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required pattern="[0-9]{10}">
@@ -98,19 +87,15 @@
                 </div>
                 <div class="detalle_form_campos3">
                     <span>Precio por persona</span>
-                    <input type="number" id="precioPersona" name="precioPersona" value="9100" readonly>
+                    <input type="number" id="precioPersona" name="precioPersona" value="100" readonly>
                     <input type="text" id="Subtotal" name="Subtotal" placeholder="Subtotal" readonly>
                 </div>
                     <input type="text" name="total" id="total" placeholder="Total" readonly>
                     <input type="email" name="correo" id="correo" placeholder="Correo" required>
                     <textarea name="comentarios" id="comentarios" placeholder="Comentarios"></textarea>
                     <button type="submit" class="ini">Reservar</button>
-            
             </form>
         </div>
-        
-        
-
         <script>
             // Verificar la sesión antes de enviar el formulario
             function verificarSesion() {

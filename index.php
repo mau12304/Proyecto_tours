@@ -7,6 +7,8 @@ require_once('controlador/reservaController.php');
 require_once('controlador/registroController.php');
 require_once('controlador/datosController.php');
 require_once('controlador/clienteController.php');
+require_once('controlador/pagoController.php');
+
 if (isset($_GET['p']) && method_exists('paquetesController', $_GET['p'])) {
     $metodo = $_GET['p'];
     paquetesController::{$metodo}();
@@ -33,7 +35,12 @@ elseif (isset($_GET['d']) && method_exists('DatosController', $_GET['d'])) {
 elseif (isset($_GET['i']) && method_exists('indexController', $_GET['i'])) {
     $metodo = $_GET['i'];
     indexController::{$metodo}();
-} else {
+}
+elseif (isset($_GET['a']) && method_exists('pagoController', $_GET['a'])) {
+    $metodo = $_GET['a'];
+    PagoController::{$metodo}();
+} 
+else {
     indexController::index();
 }
 ?>

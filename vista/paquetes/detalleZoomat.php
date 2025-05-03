@@ -73,17 +73,6 @@
             <div class="detalle_form_titulo">
                 <h1>RESERVAR PAQUETE</h1>
             </div>
-
-
-                <?php if (isset($_GET['error'])): ?>
-                <p class="error-msg"><?php echo htmlspecialchars($_GET['error'], ENT_QUOTES, 'UTF-8'); ?></p>
-                <?php endif; ?>
-
-                <?php if (isset($_GET['success'])): ?>
-                <p class="success-msg"><?php echo htmlspecialchars($_GET['success'], ENT_QUOTES, 'UTF-8'); ?></p>
-                <?php endif; ?>
-
-
             <form action="index.php?r=reservarZoomat" method="POST" class="detalle_formulario" onsubmit="return verificarSesion()">
                 <div class="detalle_form_campos" >
                     <input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required pattern="[0-9]{10}">

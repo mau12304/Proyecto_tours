@@ -24,7 +24,7 @@ $userName = $isAuthenticated && isset($_SESSION['nombre_usuario'])
     <link rel="stylesheet" href="Vista/css/style_paquetes.css">
     <link rel="stylesheet" href="vista/css/style_blog.css">
 
-    <link rel="stylesheet" href="vista/css/detallePaquetes.css">
+    <link rel="stylesheet" href="Vista/css/detallePaquetes.css">
 
     <link rel="stylesheet" href="vista/css/editarPaquetes.css">
     <link rel="stylesheet" href="vista/css/editarDatosBD.css">
@@ -57,10 +57,10 @@ $userName = $isAuthenticated && isset($_SESSION['nombre_usuario'])
                     <a href="index.php?p=editarPaquetes">Editar Paquetes y Servicios</a>
                 <?php endif; ?>
                 <?php if ($isEmployee):?>
-                    <a href="index.php?d=editarDatos">Datos</a>
+                    <a href="index.php?d=editarDatos">Admin</a>
                 <?php endif; ?>
                 <?php if ($isClient): ?>
-                    <a href="index.php?c=mostrarDatos">Sus datos</a>
+                    <a href="index.php?c=mostrarDatos">Sus reservas</a>
                 <?php endif; ?>
                 <li class="nav-item">
                     <span class="nav-link disabled"><?= $userName ?> !</span>
