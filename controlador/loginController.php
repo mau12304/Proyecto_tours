@@ -19,7 +19,6 @@ class loginController{
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['usuario']) && !empty($_POST['contraseña'])) {
             $usuario = $_POST['usuario'];
             $contrasena = $_POST['contraseña'];
-    
             $userModel = new loginModel();
             $tipoUsuario = $userModel->iniciarsesion($usuario, $contrasena);
     
