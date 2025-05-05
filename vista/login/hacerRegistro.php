@@ -2,7 +2,7 @@
 <article class="registro">
     <form action="index.php?g=registro" method="post" class="registro_form">
         <p class="registro_title">Registrarse </p>
-        <p class="registro_message">Ingresa los siguientes datos:</p>
+        <p class="registro_message">Ingresa los siguientes datos: </p>
             <div class="registro_flex">
             <label>
                 <input  type="text" name="username" id="username" class="registro_input" required>
