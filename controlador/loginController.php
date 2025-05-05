@@ -16,21 +16,25 @@ class loginController{
     }
 
     public static function login() {
-        $usuario = $_POST['usuario'];
-        $contrasena = $_POST['contraseña'];
-
-        $userModel = new loginModel();
-        $tipoUsuario = $userModel->iniciarsesion($usuario, $contrasena);
-        
-        if ($tipoUsuario === 'empleado' || $tipoUsuario === 'cliente') {
-            $_SESSION['tipo_usuario'] = $tipoUsuario;
-            require_once('vista/index.php');
-        } elseif ($tipoUsuario === 'Regístrate para acceder') {
-            require_once('vista/login/hacerRegistro.php');
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['usuario']) && !empty($_POST['contraseña'])) {
+            $usuario = $_POST['usuario'];
+            $contrasena = $_POST['contraseña'];
+    
+            $userModel = new loginModel();
+            $tipoUsuario = $userModel->iniciarsesion($usuario, $contrasena);
+    
+            if ($tipoUsuario === 'empleado' || $tipoUsuario === 'cliente') {
+                $_SESSION['tipo_usuario'] = $tipoUsuario;
+                require_once('vista/index.php');
+            } elseif ($tipoUsuario === 'Regístrate para acceder') {
+                require_once('vista/login/hacerRegistro.php');
+            }
+        } else {
+            echo "<script>alert('Completa todos los campos.');</script>";
+            require_once('vista/login/login.php');
         }
         exit();
     }
-    
     
     public static function logout() {
         session_unset();
